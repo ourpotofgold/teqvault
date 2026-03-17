@@ -32,27 +32,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Contact Form "Thank You" Logic
+    // 4. Contact Form Google Script Logic
     const contactForm = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    // Connected to your exact Google Web App Deployment
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw7kysWa79PxjOZAufHysZkxDn2Nt163MMXpaw219527Zp-pGPJMGIr3rGfmp9s3WlM/exec"; 
 
     if (contactForm && thankYouMessage) {
         contactForm.addEventListener('submit', function(e) {
-            // Prevent the page from reloading
             e.preventDefault(); 
             
-            // Note: If you want to actually send the email to support@teqvault.online later,
-            // you will connect a service like Formspree or EmailJS here.
+            // Visual feedback for the user
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="animate-pulse">Transmitting...</span>`;
+
+            // Collect data
+            const formData = new FormData(contactForm);
             
-            // Hide the form and show the thank you message
-            contactForm.classList.add('hidden');
-            
-            // Remove hidden class and add a small fade-in effect
-            thankYouMessage.classList.remove('hidden');
-            thankYouMessage.classList.add('animate-pulse'); // Optional subtle animation
-            
-            // Re-initialize icons just in case the checkmark icon needs to render
-            lucide.createIcons();
+            // Send to Google Scripts via Fetch
+            fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                body: formData,
+                mode: "no-cors" // Essential for Google Script cross-origin requests
+            })
+            .then(() => {
+                // Success UI transition
+                contactForm.classList.add('hidden');
+                thankYouMessage.classList.remove('hidden');
+                thankYouMessage.classList.add('animate-pulse');
+                lucide.createIcons();
+            })
+            .catch(err => {
+                console.error("Transmission Error:", err);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i data-lucide="alert-circle" class="w-4 h-4"></i> Retry Transmission`;
+                lucide.createIcons();
+            });
         });
     }
 });

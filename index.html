@@ -106,7 +106,7 @@
                         <tr class="hover:bg-[var(--circuit-blue)]/5 transition border-b border-white/5">
                             <td data-label="Pillar" class="p-6 font-bold text-[var(--circuit-blue)] font-space uppercase">Phase 1: Foundation</td>
                             <td data-label="Focus" class="p-6 text-white">Quetiemals &amp; Mobile Games</td>
-                            <td data-label="Objective" class="p-6 text-slate-400">Establish cash flow and brand recognition in the app stores.</td>
+                            <td data-label="Objective" class="p-6 text-slate-400">Establish a solid fanbase and brand recognition in the global app stores.</td>
                         </tr>
                         <tr class="hover:bg-[var(--voltage-orange)]/5 transition border-b border-white/5">
                             <td data-label="Pillar" class="p-6 font-bold text-[var(--voltage-orange)] font-space uppercase">Phase 1: Crossover</td>
@@ -141,18 +141,18 @@
                 <div class="grid md:grid-cols-2 gap-6">
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Name</label>
-                        <input type="text" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
+                        <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
                     </div>
                     <div class="space-y-2">
                         <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Address</label>
-                        <input type="email" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
+                        <input type="email" name="email" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
                     </div>
                 </div>
                 <div class="space-y-2">
                     <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Message</label>
-                    <textarea required rows="4" class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition"></textarea>
+                    <textarea name="message" required rows="4" class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition"></textarea>
                 </div>
-                <button type="submit" class="btn-vault w-full py-4 rounded-lg text-white font-bold uppercase tracking-widest text-xs flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform">
+                <button type="submit" id="submitBtn" class="btn-vault w-full py-4 rounded-lg text-white font-bold uppercase tracking-widest text-xs flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform">
                     <i data-lucide="send" class="w-4 h-4"></i> Transmit Message
                 </button>
             </form>
