@@ -1,0 +1,147 @@
+/* TEQ VAULT - Master Stylesheet 
+    Theme: Deep Tech / Engineering-First (Logo Synced)
+*/
+
+:root {
+    --bg-deep: #050810;
+    --bg-elevated: #0f172a;
+    --circuit-blue: #00A3FF;   /* From logo left glow */
+    --voltage-orange: #FF8A00; /* From logo right glow */
+    --steel-silver: #94A3B8;   /* From chiseled metal */
+    --glass-border: rgba(148, 163, 184, 0.1);
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-deep);
+    color: var(--text-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .font-space {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* --- Typography & Gradient Text --- */
+.gradient-text {
+    background: linear-gradient(
+        to right, 
+        var(--circuit-blue), 
+        #6366f1, 
+        var(--voltage-orange), 
+        var(--circuit-blue)
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+/* --- Layout Components --- */
+.glass-panel {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.glass-panel:hover {
+    border-color: var(--circuit-blue);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+/* --- Scroll Animations --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    will-change: transform, opacity;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 { transition-delay: 0.1s; }
+.delay-200 { transition-delay: 0.2s; }
+.delay-300 { transition-delay: 0.3s; }
+
+/* --- Strategy Table Styling --- */
+.strategy-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.strategy-table th {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--text-muted);
+    font-weight: 900;
+}
+
+.strategy-table td {
+    padding: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .strategy-table thead { display: none; }
+    
+    .strategy-table tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid var(--glass-border);
+        border-radius: 1rem;
+        background: rgba(255,255,255,0.02);
+    }
+    
+    .strategy-table td {
+        display: block;
+        text-align: left;
+        padding: 1rem;
+        border: none;
+    }
+    
+    .strategy-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.65rem;
+        display: block;
+        color: var(--circuit-blue);
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: var(--circuit-blue); }
