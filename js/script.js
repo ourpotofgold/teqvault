@@ -32,7 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 4. Contact Form Google Script Logic
+// 4. Mobile Menu Logic
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const iconContainer = document.getElementById('menu-icon-container');
+
+if (mobileMenuBtn && mobileMenu && iconContainer) {
+    mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        
+        // Toggle Visibility
+        mobileMenu.classList.toggle('hidden');
+        
+        // Move the operators to the end of the lines to satisfy JSHint (W014)
+        iconContainer.innerHTML = isHidden ? 
+            '<i data-lucide="x"></i>' : 
+            '<i data-lucide="menu"></i>';
+            
+        lucide.createIcons();
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            iconContainer.innerHTML = '<i data-lucide="menu"></i>';
+            lucide.createIcons();
+        });
+    });
+}
+    // 5. Contact Form Google Script Logic
     const contactForm = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
     const submitBtn = document.getElementById('submitBtn');

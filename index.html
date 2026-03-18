@@ -8,21 +8,35 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="antialiased">
-
-    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <img src="imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
-            </div>
-            <div class="flex gap-6 md:gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
-    <a href="#mission" class="hover:text-[var(--circuit-blue)] transition">Mission</a>
-    <a href="#ecosystem" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
-    <a href="pages/library.html" class="hover:text-white transition">IP Library</a> 
-    <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
-    <a href="#contact" class="text-white border border-white/20 px-3 py-1.5 rounded">Contact</a>
-</div>
+<nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
         </div>
-    </nav>
+
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+            <a href="#mission" class="hover:text-[var(--circuit-blue)] transition">Mission</a>
+            <a href="#ecosystem" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+            <a href="pages/library.html" class="hover:text-white transition">IP Library</a> 
+            <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
+            <a href="#contact" class="text-white border border-white/20 px-3 py-1.5 rounded">Contact</a>
+        </div>
+
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+    <span id="menu-icon-container">
+        <i data-lucide="menu"></i>
+    </span>
+</button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-[#050810] border-b border-white/5 px-6 py-8 space-y-6 text-center">
+        <a href="#mission" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Mission</a>
+        <a href="#ecosystem" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Ecosystem</a>
+        <a href="pages/library.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">IP Library</a>
+        <a href="#roadmap" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Roadmap</a>
+        <a href="#contact" class="block text-sm font-bold uppercase tracking-widest text-white border border-white/20 py-3 rounded-lg">Contact</a>
+    </div>
+</nav>
 
     <header id="mission" class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 relative">
         <div class="reveal mb-12">
@@ -170,21 +184,22 @@
     </section>
 
     <footer class="py-24 px-6 text-center border-t border-white/5 relative bg-slate-950/40">
-        <div class="max-w-3xl mx-auto mb-16 reveal">
-            <h3 class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-4">The Teq Vault Philosophy</h3>
-            
-            <h4 class="text-3xl font-space font-bold text-white mb-6 uppercase tracking-widest">
-                <span class="text-[var(--voltage-orange)]">Less</span> is More.
-            </h4>
-            
-            <p class="text-slate-300 text-lg leading-relaxed italic">
-                "We bring 'circuit-level' precision to every project. By stripping away the unnecessary, we amplify the impact. Whether we are debugging a script for a mobile game, structuring the plot of a young adult novel, or conceptualizing a circuit board layout, our work is defined by professional quality and an engineering-first mindset. We don't just create content; we build the optimized infrastructure for immersion."
-            </p>
-        </div>
+    <div class="max-w-3xl mx-auto mb-16 reveal">
+        <h3 class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-4">The Teq Vault Philosophy</h3>
         
-        <img src="imgs/tvault.png" class="h-8 mx-auto mb-6 opacity-40 transition-opacity hover:opacity-100" alt="Teq Vault Logo">
-        <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase">Innovation • Engineering • Imagination</p>
-    </footer>
+        <h4 class="text-3xl font-space font-bold text-white mb-6 uppercase tracking-widest">
+            <span class="text-[var(--voltage-orange)]">Less</span> is More.
+        </h4>
+        
+        <p class="text-slate-300 text-lg leading-relaxed italic">
+            "We bring 'circuit-level' precision to every project. By stripping away the unnecessary, we amplify the impact. Whether we are debugging a script for a mobile game, structuring the plot of a young adult novel, or conceptualizing a circuit board layout, our work is defined by professional quality and an engineering-first mindset. We don't just create content; we build the optimized infrastructure for immersion."
+        </p>
+    </div>
+    
+    <img src="imgs/tvault.png" class="h-8 mx-auto mb-6 opacity-40 transition-opacity hover:opacity-100" alt="Teq Vault Logo">
+    <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
+    <p class="text-xs text-slate-500 font-light">© 2026 Quetiemals | Teq Vault</p>
+</footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/script.js"></script>
