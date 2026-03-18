@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Library | TEQ VAULT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body class="pt-32">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="../index.html"><img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo"></a>
+                <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:block">Teq Vault</span>
+            </div>
+            <div class="flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400">
+                <a href="vision.html" class="hover:text-[var(--circuit-blue)] transition">Vision</a>
+                <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+                <a href="library.html" class="text-white border-b border-white">IP Library</a>
+                <a href="strategy.html" class="hover:text-white transition">Strategy</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-5xl mx-auto text-center px-6 py-20">
+        <div class="reveal inline-block px-4 py-1 rounded-full border border-[var(--voltage-orange)]/30 bg-[var(--voltage-orange)]/5 text-[var(--voltage-orange)] text-[10px] font-black uppercase tracking-[0.5em] mb-8">
+            Phase I: Narrative Foundation
+        </div>
+        <h1 class="reveal text-5xl md:text-7xl font-space font-bold uppercase tracking-tighter mb-8 leading-[0.9]">
+            Intellectual <br><span class="gradient-text">Property Library</span>
+        </h1>
+        <p class="reveal delay-100 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            Our literary assets serve as the blueprints for our digital ecosystems. By engineering deep lore first, we ensure every game and hardware component has a built-in audience and a proven narrative soul.
+        </p>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-12">
+            
+            <div class="reveal glass-panel p-8 rounded-3xl border-t-2 border-[var(--circuit-blue)] group">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <img src="../imgs/book-cover-02.png" class="w-full md:w-48 rounded-xl shadow-2xl group-hover:scale-105 transition duration-500" alt="For Land and Kin">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-space font-bold text-white uppercase">For Land and Kin</h3>
+                        <p class="text-sm text-slate-400">The flagship entry in the Eyuforyia mythos. This asset establishes the world-building parameters used in our mobile-first software development.</p>
+                        <ul class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] space-y-2 font-bold">
+                            <li>• Target: YA / Teens</li>
+                            <li>• Format: Digital & Print</li>
+                            <li>• Status: Market Ready</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reveal delay-100 glass-panel p-8 rounded-3xl border-t-2 border-slate-700 opacity-60">
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="w-full md:w-48 aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-white/5">
+                        <i data-lucide="lock" class="text-slate-700 w-10 h-10"></i>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-space font-bold text-slate-500 uppercase">Project: Marsh</h3>
+                        <p class="text-sm text-slate-600">Confidential narrative expansion focusing on nocturnal ecosystem mechanics. Currently in editorial development.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="reveal mt-32 p-12 glass-panel rounded-3xl border border-[var(--voltage-orange)]/20 text-center">
+            <h2 class="text-3xl font-space font-bold text-white uppercase mb-6">Cross-Medium <span class="text-[var(--voltage-orange)]">Synergy</span></h2>
+            <p class="text-slate-400 max-w-2xl mx-auto mb-8">
+                Every literary title we produce is a "Transmedia IP." This means the characters, physics, and conflicts are designed from day one to be modular—ready for software integration, hardware branding, and global licensing.
+            </p>
+            <a href="strategy.html" class="inline-block bg-white text-black font-bold uppercase tracking-widest text-[10px] px-8 py-4 rounded-lg hover:bg-[var(--circuit-blue)] hover:text-white transition">View Strategic Pillars</a>
+        </section>
+    </main>
+
+    <footer class="py-20 border-t border-white/5 text-center mt-20">
+        <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase">Innovation • Engineering • Imagination</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        const obs = new IntersectionObserver(es => es.forEach(e => {
+            if (e.isIntersecting) e.target.classList.add('active');
+        }), { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+    </script>
+</body>
+</html>
