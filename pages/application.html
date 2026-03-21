@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply | TEQ VAULT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css"> 
+</head>
+<body class="pt-32">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="../index.html"><img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo"></a>
+                <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:block">Teq Vault</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 items-center">
+                <a href="vision.html" class="hover:text-[var(--circuit-blue)] transition">Vision</a>
+                <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+                <a href="join-the-vault.html" class="text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)]">Careers</a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="block md:hidden text-white p-2">
+                <span id="menu-icon-container"><i data-lucide="menu"></i></span>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-[#050810] border-b border-white/5 px-6 py-8 space-y-6 text-center">
+            <a href="vision.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400">Vision</a>
+            <a href="ecosystem.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400">Ecosystem</a>
+            <a href="join-the-vault.html" class="block text-sm font-bold uppercase tracking-widest text-[var(--circuit-blue)]">Careers</a>
+        </div>
+    </nav>
+
+    <header class="max-w-3xl mx-auto text-center px-6 py-12">
+        <div class="reveal inline-block px-4 py-1 rounded-full border border-[var(--voltage-orange)]/30 bg-[var(--voltage-orange)]/5 text-[var(--voltage-orange)] text-[10px] font-black uppercase tracking-[0.5em] mb-6">
+            Secure Terminal
+        </div>
+        <h1 class="reveal text-4xl md:text-6xl font-space font-bold uppercase tracking-tighter mb-4">
+            Candidate <span class="gradient-text">Onboarding</span>
+        </h1>
+        <p class="reveal delay-100 text-slate-400 text-lg">Transmit your credentials for review by the Teq Vault engineering and narrative teams.</p>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pb-24">
+        <div class="reveal delay-200 glass-panel p-8 md:p-12 rounded-3xl border-t-2 border-[var(--circuit-blue)] shadow-[0_0_50px_rgba(0,163,255,0.05)] relative overflow-hidden">
+            
+            <form id="vaultAppForm" class="space-y-8">
+                
+                <div class="space-y-2 border-b border-white/5 pb-8">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-[var(--circuit-blue)] flex items-center gap-2">
+                        <i data-lucide="cpu" class="w-3 h-3"></i> Target Discipline
+                    </label>
+                    <select name="position" required class="w-full bg-slate-900/80 border border-white/10 rounded-lg px-4 py-4 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition appearance-none font-space text-lg cursor-pointer">
+                        <option value="" disabled selected>Select your area of expertise...</option>
+                        <option value="Game Tester">Interactive Game Tester (Beta Access)</option>
+                        <option value="Proofreader">IP Proofreader (Lore Specialist)</option>
+                    </select>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Legal Name / Alias</label>
+                        <input type="text" name="name" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Hub</label>
+                        <input type="email" name="email" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Discord Handle (Optional)</label>
+                        <input type="text" name="discord" placeholder="username#0000" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Portfolio / Resume Link</label>
+                        <input type="url" name="portfolio" placeholder="https://" class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition">
+                    </div>
+                </div>
+
+                <div class="space-y-2 border-t border-white/5 pt-8">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-[var(--voltage-orange)] flex items-center gap-2">
+                        <i data-lucide="terminal" class="w-3 h-3"></i> Technical Brief
+                    </label>
+                    <p class="text-xs text-slate-500 mb-2">Why do you belong in the Vault? Describe your debugging process, narrative analysis style, or relevant experience.</p>
+                    <textarea name="brief" rows="6" required class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition placeholder:text-slate-700" placeholder="Initialize input..."></textarea>
+                </div>
+
+                <button type="submit" id="appSubmitBtn" class="w-full py-5 bg-white text-black font-bold uppercase tracking-widest text-sm rounded-lg hover:bg-[var(--circuit-blue)] hover:text-white transition-all flex justify-center items-center gap-3">
+                    <i data-lucide="upload-cloud" class="w-5 h-5"></i> Transmit Application Data
+                </button>
+            </form>
+
+            <div id="appSuccess" class="hidden text-center py-16">
+                <div class="w-24 h-24 bg-[var(--circuit-blue)]/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-[var(--circuit-blue)]/30">
+                    <i data-lucide="cpu" class="w-12 h-12 text-[var(--circuit-blue)]"></i>
+                </div>
+                <h3 class="text-3xl font-space font-bold text-white uppercase mb-2">Integration Successful</h3>
+                <p class="text-slate-400 text-lg">Your data has been permanently logged into the Vault. <br>Our directors will review your profile shortly.</p>
+                <a href="../index.html" class="inline-block mt-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-1 hover:text-white hover:border-white transition">Return to Main Terminal</a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/5 text-center bg-black/20">
+        <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
+        <p class="text-xs text-slate-500 font-light">© 2026 Teq Vault LLC</p>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

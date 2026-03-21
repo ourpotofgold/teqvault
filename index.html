@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="antialiased">
+
 <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <div class="flex items-center gap-3">
             <img src="imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
         </div>
 
-        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 items-center">
             <a href="#mission" class="hover:text-[var(--circuit-blue)] transition">Mission</a>
             <a href="#ecosystem" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
             <a href="pages/library.html" class="hover:text-white transition">IP Library</a> 
             <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
-            <a href="#contact" class="text-white border border-white/20 px-3 py-1.5 rounded">Contact</a>
+            <a href="pages/join-the-vault.html" class="text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/30 px-3 py-1.5 rounded hover:bg-[var(--circuit-blue)]/10 transition">Careers</a>
+            <a href="#contact" class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition">Contact</a>
         </div>
 
-        <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-    <span id="menu-icon-container">
-        <i data-lucide="menu"></i>
-    </span>
-</button>
+        <button id="mobile-menu-btn" class="block md:hidden text-white p-2">
+            <span id="menu-icon-container">
+                <i data-lucide="menu"></i>
+            </span>
+        </button>
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-[#050810] border-b border-white/5 px-6 py-8 space-y-6 text-center">
@@ -34,6 +36,7 @@
         <a href="#ecosystem" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Ecosystem</a>
         <a href="pages/library.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">IP Library</a>
         <a href="#roadmap" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Roadmap</a>
+        <a href="pages/join-the-vault.html" class="block text-sm font-bold uppercase tracking-widest text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/20 py-3 rounded-lg">Careers</a>
         <a href="#contact" class="block text-sm font-bold uppercase tracking-widest text-white border border-white/20 py-3 rounded-lg">Contact</a>
     </div>
 </nav>
@@ -183,23 +186,64 @@
         </div>
     </section>
 
-    <footer class="py-24 px-6 text-center border-t border-white/5 relative bg-slate-950/40">
-    <div class="max-w-3xl mx-auto mb-16 reveal">
-        <h3 class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-4">The Teq Vault Philosophy</h3>
+    <section id="quick-apply" class="py-24 max-w-4xl mx-auto px-6 border-t border-white/5">
+        <div class="reveal text-center mb-12">
+            <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--circuit-blue)] pb-2">Join the Fleet</span>
+            <h2 class="text-4xl font-bold mt-8 font-space uppercase tracking-tighter">Quick <span class="text-[var(--voltage-orange)]">Application</span></h2>
+            <p class="text-slate-400 mt-4 text-sm">Select your discipline and transmit your credentials to the Vault.</p>
+        </div>
         
-        <h4 class="text-3xl font-space font-bold text-white mb-6 uppercase tracking-widest">
-            <span class="text-[var(--voltage-orange)]">Less</span> is More.
-        </h4>
-        
-        <p class="text-slate-300 text-lg leading-relaxed italic">
-            "We bring 'circuit-level' precision to every project. By stripping away the unnecessary, we amplify the impact. Whether we are debugging a script for a mobile game, structuring the plot of a young adult novel, or conceptualizing a circuit board layout, our work is defined by professional quality and an engineering-first mindset. We don't just create content; we build the optimized infrastructure for immersion."
-        </p>
-    </div>
+        <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-[var(--voltage-orange)] relative overflow-hidden shadow-2xl">
+            <form id="quickAppForm" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Full Name</label>
+                        <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Discipline</label>
+                        <select name="position" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition appearance-none cursor-pointer">
+                            <option value="Game Tester">Game Tester (Technical)</option>
+                            <option value="Proofreader">Proofreader (Narrative)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-y-2">
+                    <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Portfolio Link / Brief Bio</label>
+                    <textarea name="message" required rows="3" placeholder="Link to your work or a brief summary of your experience..." class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition"></textarea>
+                </div>
+                <button type="submit" id="quickSubmitBtn" class="btn-vault w-full py-4 rounded-lg text-white font-bold uppercase tracking-widest text-xs flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform bg-white/5 border border-white/10 hover:bg-[var(--voltage-orange)]/20 hover:border-[var(--voltage-orange)]">
+                    <i data-lucide="cpu" class="w-4 h-4"></i> Submit to Vault
+                </button>
+            </form>
     
-    <img src="imgs/tvault.png" class="h-8 mx-auto mb-6 opacity-40 transition-opacity hover:opacity-100" alt="Teq Vault Logo">
-    <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
-    <p class="text-xs text-slate-500 font-light">© 2026 Quetiemals | Teq Vault</p>
-</footer>
+            <div id="quickSuccessMessage" class="hidden text-center py-8">
+                <div class="w-16 h-16 bg-[var(--circuit-blue)]/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[var(--circuit-blue)]/30">
+                    <i data-lucide="check-circle" class="w-8 h-8 text-[var(--circuit-blue)]"></i>
+                </div>
+                <h3 class="text-2xl font-space font-bold text-white uppercase">Application Logged</h3>
+                <p class="text-slate-400 text-sm mt-2">Your data has been successfully transmitted to our recruitment terminal.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 px-6 text-center border-t border-white/5 relative bg-slate-950/40">
+        <div class="max-w-3xl mx-auto mb-16 reveal">
+            <h3 class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-4">The Teq Vault Philosophy</h3>
+            
+            <h4 class="text-3xl font-space font-bold text-white mb-6 uppercase tracking-widest">
+                <span class="text-[var(--voltage-orange)]">Less</span> is More.
+            </h4>
+            
+            <p class="text-slate-300 text-lg leading-relaxed italic">
+                "We bring 'circuit-level' precision to every project. By stripping away the unnecessary, we amplify the impact. Whether we are debugging a script for a mobile game, structuring the plot of a young adult novel, or conceptualizing a circuit board layout, our work is defined by professional quality and an engineering-first mindset. We don't just create content; we build the optimized infrastructure for immersion."
+            </p>
+        </div>
+        
+        <img src="imgs/tvault.png" class="h-8 mx-auto mb-6 opacity-40 transition-opacity hover:opacity-100" alt="Teq Vault Logo">
+        <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
+        <p class="text-xs text-slate-500 font-light">© 2026 Quetiemals | Teq Vault</p>
+    </footer>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/script.js"></script>
