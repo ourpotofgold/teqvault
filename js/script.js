@@ -97,12 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.innerHTML = `<span class="animate-pulse">Transmitting...</span>`;
             }
 
-            const formData = new FormData(formElement);
+            // FIX: Convert FormData to URLSearchParams so Google Apps Script parses it flawlessly
+            const data = new URLSearchParams(new FormData(formElement));
             
             fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
-                body: formData,
-                mode: "no-cors" 
+                body: data
+                // mode: "no-cors" is removed here so it properly posts to Apps Script
             })
             .then(() => {
                 formElement.classList.add('hidden');
