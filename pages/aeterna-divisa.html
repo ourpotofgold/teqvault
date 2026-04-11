@@ -6,59 +6,100 @@
   <title>Aeterna Divisa | TEQ VAULT IP Archive</title>
   <meta name="description" content="Aeterna Divisa — A celestial sci-fi IP about music, divinity, and the cost of free will. A Teq Vault story universe.">
 
-  <!-- Tailwind -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font: Space Grotesk -->
+  <!-- Google Fonts: Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Your stylesheet -->
+  <!-- Your stylesheet (adjust path as needed) -->
   <link rel="stylesheet" href="/styles/style.css">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom CSS -->
+  <style>
+    :root {
+      --circuit-blue: #00a3ff;
+      --voltage-orange: #ff7a1a;
+    }
+    .font-space { font-family: 'Space Grotesk', sans-serif; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.92);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(148, 163, 184, 0.15);
+    }
+    .gradient-text {
+      background: linear-gradient(130deg, var(--circuit-blue), var(--voltage-orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: transparent;
+      display: inline-block;
+    }
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .freq-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.4; }
+    }
+    .freq-lines {
+      background-image: 
+        linear-gradient(90deg, transparent 49%, rgba(0,163,255,0.03) 50%, transparent 51%),
+        linear-gradient(rgba(0,163,255,0.03) 49%, transparent 50%, rgba(0,163,255,0.03) 51%),
+        linear-gradient(90deg, transparent 49%, rgba(255,122,26,0.02) 50%, transparent 51%);
+      background-size: 40px 100%, 40px 100%, 80px 100%;
+      animation: freq-scan 3s linear infinite;
+    }
+    @keyframes freq-scan {
+      0% { background-position: 0 0, 40px 0, 80px 0; }
+      100% { background-position: 80px 0, 120px 0, 160px 0; }
+    }
+  </style>
 </head>
+
 <body class="antialiased overflow-x-hidden bg-[#050810] text-slate-100">
 
-  <!-- ═══════════════ NAV -->
+  <!-- NAVIGATION -->
   <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <a href="../index.html" class="flex items-center gap-3">
         <img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
       </a>
       <div class="flex gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 items-center">
-        <a href="../index.html"             class="hover:text-white transition">Home</a>
-        <a href="library.html"              class="hover:text-white transition">IP Library</a>
-        <a href="../index.html#contact"     class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition">Contact</a>
+        <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="library.html" class="hover:text-white transition-colors">IP Library</a>
+        <a href="../index.html#contact" class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition-all">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- ═══════════════ HERO -->
+  <!-- HERO SECTION -->
   <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 overflow-hidden">
-
-    <!-- Layered background atmosphere -->
+    <!-- Background layers (z-0) -->
     <div class="pointer-events-none absolute inset-0 z-0">
-      <!-- Deep background image -->
       <img src="../imgs/aeterna-divisa.png"
            class="w-full h-full object-cover opacity-20 scale-105"
-           alt="">
-      <!-- Gradient overlays (softened) -->
+           alt="Aeterna Divisa Background">
       <div class="absolute inset-0 bg-gradient-to-b from-[#050810]/70 via-transparent to-[#050810]/80"></div>
-      <!-- Blue radial glow top -->
       <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse,rgba(0,163,255,0.25),transparent_60%)]"></div>
-      <!-- Subtle orange bottom accent -->
       <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(255,122,26,0.12),transparent_60%)]"></div>
-      <!-- Animated frequency lines (CSS only) -->
       <div class="freq-lines absolute inset-0"></div>
     </div>
 
+    <!-- Content (z-10) -->
     <div class="relative z-10 max-w-4xl mx-auto">
-      <!-- Breadcrumb / sector tag -->
+      <!-- Breadcrumb -->
       <div class="reveal mb-6 flex items-center justify-center gap-3">
-        <a href="library.html" class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300 hover:text-slate-100 transition">
+        <a href="library.html" class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300 hover:text-slate-100 transition-colors">
           IP Library
         </a>
         <span class="text-slate-600">›</span>
@@ -67,7 +108,7 @@
         <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-[var(--circuit-blue)]">Celestial-01</span>
       </div>
 
-      <!-- Archive sector badge -->
+      <!-- Archive badge -->
       <div class="reveal mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--circuit-blue)]/40 bg-[var(--circuit-blue)]/15">
         <span class="w-1.5 h-1.5 rounded-full bg-[var(--circuit-blue)] animate-pulse"></span>
         <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em]">
@@ -81,55 +122,57 @@
         <span class="gradient-text">Divisa</span>
       </h1>
 
-      <!-- Tagline + meta -->
-      <p class="reveal delay-100 text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300 mb-6">
+      <!-- Tagline -->
+      <p class="reveal text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300 mb-6">
         High‑Concept Sci‑Fi &nbsp;•&nbsp; Novella / Serialized Prose &nbsp;•&nbsp; YA / Adult
       </p>
 
       <!-- Hero quote -->
-      <blockquote class="reveal delay-200 text-xl md:text-2xl text-slate-100 italic leading-relaxed max-w-2xl mx-auto border-l-2 border-[var(--circuit-blue)]/50 pl-6 text-left bg-black/20 py-4">
+      <blockquote class="reveal text-xl md:text-2xl text-slate-100 italic leading-relaxed max-w-2xl mx-auto border-l-2 border-[var(--circuit-blue)]/50 pl-6 text-left bg-black/20 py-4">
         "The Celestial Archives housed frequencies, not books. Every truth ever spoken was a chord, and every lie a dissonance the machinery worked to silence."
       </blockquote>
 
       <!-- Scroll cue -->
-      <div class="reveal delay-300 mt-12 flex flex-col items-center gap-2 text-slate-300">
+      <div class="reveal mt-12 flex flex-col items-center gap-2 text-slate-300">
         <span class="text-[9px] uppercase tracking-[0.4em]">Read the Archive</span>
-        <i data-lucide="chevrons-down" class="w-5 h-5 animate-bounce"></i>
+        <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
       </div>
     </div>
   </header>
 
-  <!-- ═══════════════ OVERVIEW BAND -->
+  <!-- OVERVIEW BAND -->
   <section class="py-20 border-t border-white/5 bg-slate-950/70">
     <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
       <div class="reveal glass-panel rounded-xl p-6 border border-white/10">
         <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Form</p>
         <p class="text-slate-50 font-space font-bold text-sm">Novella / Serialized Prose</p>
       </div>
-      <div class="reveal delay-100 glass-panel rounded-xl p-6 border border-white/10">
+      <div class="reveal glass-panel rounded-xl p-6 border border-white/10">
         <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Audience</p>
-        <p class="text-slate-50 font-space font-bold text-sm">Young Adult &amp; Adult Sci‑Fi</p>
+        <p class="text-slate-50 font-space font-bold text-sm">Young Adult & Adult Sci‑Fi</p>
       </div>
-      <div class="reveal delay-200 glass-panel rounded-xl p-6 border border-white/10">
+      <div class="reveal glass-panel rounded-xl p-6 border border-white/10">
         <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Status</p>
-        <p class="text-[var(--voltage-orange)] font-space font-bold text-sm">Universe Bible &nbsp;·&nbsp; In Development</p>
+        <p class="text-[var(--voltage-orange)] font-space font-bold text-sm">Universe Bible · In Development</p>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ THE WORLD -->
+  <!-- THE WORLD -->
   <section class="py-24 max-w-6xl mx-auto px-6 border-t border-white/5">
     <div class="grid md:grid-cols-2 gap-16 items-center">
-
-      <!-- Left: world art -->
+      <!-- World art -->
       <div class="reveal order-2 md:order-1">
         <div class="relative glass-panel rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] group">
           <img src="../imgs/aeterna-divisa.png"
-               class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition duration-700"
-               alt="Aeterna Divisa World Art">
-          <!-- Frequency icon overlay -->
+               class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
+               alt="Aeterna Divisa World Art: The Crystalline Rotunda">
           <div class="absolute inset-0 flex items-center justify-center">
-            <i data-lucide="waves" class="w-32 h-32 text-[var(--circuit-blue)] opacity-20 freq-pulse"></i>
+            <svg class="w-32 h-32 text-[var(--circuit-blue)] opacity-20 freq-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
           </div>
           <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6">
             <p class="text-[9px] uppercase tracking-[0.35em] text-slate-200">
@@ -139,8 +182,8 @@
         </div>
       </div>
 
-      <!-- Right: copy -->
-      <div class="reveal delay-100 order-1 md:order-2 space-y-6">
+      <!-- World description -->
+      <div class="reveal order-1 md:order-2 space-y-6">
         <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
           The World
         </span>
@@ -159,7 +202,7 @@
           dissonance the machinery works to silence. It is here that the cracks begin.
         </p>
 
-        <!-- Theoretical framework callout -->
+        <!-- Theoretical framework -->
         <div class="p-5 glass-panel rounded-2xl border-l-4 border-[var(--circuit-blue)] border border-white/10">
           <h4 class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] font-black mb-2">Theoretical Framework</h4>
           <p class="text-xs text-slate-200 leading-relaxed">
@@ -173,7 +216,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════ PROTAGONIST -->
+  <!-- PROTAGONIST -->
   <section class="py-24 bg-slate-950/70 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6">
       <div class="reveal text-center mb-16">
@@ -223,17 +266,21 @@
     </div>
   </section>
 
-  <!-- ═══════════════ THE SCHISM PROTOCOL -->
+  <!-- SCHISM PROTOCOL (Placeholder - add your content here) -->
   <section class="py-24 max-w-6xl mx-auto px-6 border-t border-white/5">
     <div class="reveal text-center mb-16">
       <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
         The Schism Protocol
       </span>
-      <!-- Continue your section content here -->
+      <!-- Add your section content here -->
+      <p class="text-slate-400 mt-8">Content coming soon...</p>
     </div>
   </section>
 
-  <!-- TODO: add footer/scripts (Lucide init, scroll reveal, etc.) -->
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
