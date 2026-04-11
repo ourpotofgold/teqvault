@@ -8,10 +8,8 @@
   <title>TEQ VAULT | Engineering Worlds, Not Just Games</title>
   <meta name="description" content="Teq Vault LLC — Multi-disciplinary innovation hub. Games, literature, and future hardware built from an engineering-first core.">
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Google Font: Space Grotesk -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -19,10 +17,8 @@
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
   >
 
-  <!-- Lucide Icons (optional, for data-lucide="...") -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Your stylesheet -->
   <link rel="stylesheet" href="/style.css">
 
   <style>
@@ -70,7 +66,6 @@
       background-clip: text;
       color: transparent;
     }
-    /* Simple reveal animation hook (optional – animate with JS if you want) */
     .reveal {
       opacity: 1;
       transform: none;
@@ -80,7 +75,6 @@
 </head>
 <body class="antialiased">
 
-  <!-- ═══════════════════ NAV -->
   <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -125,7 +119,6 @@
     </div>
   </nav>
 
-  <!-- ═══════════════════ HERO -->
   <header id="mission" class="min-h-screen flex items-center justify-center px-6 pt-24 relative overflow-hidden">
     <div class="pointer-events-none absolute inset-0">
       <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse,rgba(0,163,255,0.12),transparent_65%)]"></div>
@@ -171,7 +164,6 @@
     </div>
   </header>
 
-  <!-- ═══════════════════ QUETIEMALS -->
   <section id="quetiemals" class="py-24 bg-slate-950/40 border-t border-white/5">
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.3fr_minmax(0,1fr)] gap-10 items-center">
       <div class="reveal space-y-5">
@@ -218,7 +210,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ ECOSYSTEM -->
   <section id="ecosystem" class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
     <div class="text-center mb-16 reveal">
       <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--circuit-blue)] pb-2">
@@ -238,7 +229,6 @@
     </div>
 
     <div class="grid md:grid-cols-3 gap-6">
-      <!-- Card 1 -->
       <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-[var(--circuit-blue)] relative overflow-hidden group card-hover">
         <div class="absolute inset-0 opacity-10 group-hover:opacity-25 transition-opacity duration-500">
           <img src="imgs/screenshot-2026-02-25-180950.png" class="w-full h-full object-cover" alt="">
@@ -254,7 +244,6 @@
         </div>
       </div>
 
-      <!-- Add two more ecosystem cards as needed -->
       <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-white/10 card-hover">
         <h3 class="font-bold text-xl text-white font-space mb-3">Technical Prototyping</h3>
         <p class="text-sm text-slate-400">
@@ -271,7 +260,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════ ROADMAP (stub) -->
   <section id="roadmap" class="py-24 border-t border-white/5 bg-slate-950/60">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
@@ -283,11 +271,9 @@
       <p class="mt-6 text-slate-400 max-w-2xl mx-auto">
         High‑level milestones for Quetiemals, IP expansion, and future hardware research slots.
       </p>
-      <!-- Add your actual roadmap content/timeline here -->
     </div>
   </section>
 
-  <!-- ═══════════════════ CONTACT (stub) -->
   <section id="contact" class="py-24 max-w-4xl mx-auto px-6 border-t border-white/5">
     <div class="text-center mb-10">
       <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--voltage-orange)] border-b border-[var(--voltage-orange)] pb-2">
@@ -301,7 +287,7 @@
       </p>
     </div>
 
-    <form action="https://formspree.io/f/your-id" method="POST" class="space-y-4 glass-panel rounded-2xl p-8 border border-white/10">
+    <form id="contactForm" class="space-y-4 glass-panel rounded-2xl p-8 border border-white/10">
       <div class="grid md:grid-cols-2 gap-4">
         <div>
           <label class="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Name</label>
@@ -319,15 +305,19 @@
         <textarea name="message" rows="4" required
                   class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[var(--circuit-blue)]"></textarea>
       </div>
-      <button type="submit"
+      <button type="submit" id="submitBtn"
               class="btn-vault px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-[0.2em] inline-flex items-center gap-2">
         <i data-lucide="send" class="w-4 h-4"></i>
         Send Message
       </button>
     </form>
+    
+    <div id="thankYouMessage" class="hidden text-center py-8">
+        <h3 class="text-xl font-space font-bold text-white uppercase mb-2">Transmission Successful</h3>
+        <p class="text-slate-400 text-sm">Your message has been logged. We will review and respond shortly.</p>
+    </div>
   </section>
 
-  <!-- ═══════════════════ FOOTER -->
   <footer class="py-8 border-t border-white/5 bg-[#020617]">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
       <p>© <span id="year"></span> Teq Vault LLC. All rights reserved.</p>
@@ -335,7 +325,7 @@
     </div>
   </footer>
 
-  <!-- ═══════════════════ SCRIPTS -->
+  <script src="/js/script.js"></script>
   <script>
     // Lucide: replace <i data-lucide="...">
     if (window.lucide) {

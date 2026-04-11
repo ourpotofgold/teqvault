@@ -102,8 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
             
             fetch(GOOGLE_SCRIPT_URL, {
                 method: "POST",
+                mode: "no-cors", // Re-added to prevent CORS block
                 body: data
-                // mode: "no-cors" is removed here so it properly posts to Apps Script
             })
             .then(() => {
                 formElement.classList.add('hidden');
