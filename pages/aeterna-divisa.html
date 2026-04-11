@@ -1,86 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-7932735753046865">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aeterna Divisa | TEQ VAULT Terminal</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aeterna Divisa | TEQ VAULT IP Archive</title>
+  <meta name="description" content="Aeterna Divisa — A celestial sci-fi IP about music, divinity, and the cost of free will. A Teq Vault story universe.">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+  >
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="/styles/style.css">
 </head>
-<body class="pt-32">
+<body class="antialiased overflow-x-hidden bg-[#050810] text-slate-100">
 
-    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <a href="../index.html"><img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo"></a>
-                <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:block">Teq Vault</span>
-            </div>
-            <div class="flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400">
-                <a href="vision.html" class="hover:text-[var(--circuit-blue)] transition">Vision</a>
-                <a href="library.html" class="text-white border-b border-white">IP Library</a>
-                <a href="strategy.html" class="hover:text-white transition">Strategy</a>
-            </div>
-        </div>
-    </nav>
+  <!-- ═══════════════ NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="../index.html" class="flex items-center gap-3">
+        <img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
+      </a>
+      <div class="flex gap-6 text-[10px] font-bold uppercase tracking-[0.3em] text-slate-300 items-center">
+        <a href="../index.html"             class="hover:text-white transition">Home</a>
+        <a href="library.html"              class="hover:text-white transition">IP Library</a>
+        <a href="../index.html#contact"     class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <header class="max-w-5xl mx-auto text-center px-6 py-20">
-        <div class="reveal inline-block px-4 py-1 rounded-full border border-[var(--circuit-blue)]/30 bg-[var(--circuit-blue)]/5 text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-8">
-            Archive Sector: Celestial-01
+  <!-- ═══════════════ HERO -->
+  <header class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 overflow-hidden">
+
+    <!-- Layered background atmosphere -->
+    <div class="pointer-events-none absolute inset-0 z-0">
+      <!-- Deep background image -->
+      <img src="../imgs/aeterna-divisa.png"
+           class="w-full h-full object-cover opacity-20 scale-105"
+           alt="">
+      <!-- Gradient overlays (softened) -->
+      <div class="absolute inset-0 bg-gradient-to-b from-[#050810]/70 via-transparent to-[#050810]/80"></div>
+      <!-- Blue radial glow top -->
+      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(ellipse,rgba(0,163,255,0.25),transparent_60%)]"></div>
+      <!-- Subtle orange bottom accent -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,rgba(255,122,26,0.12),transparent_60%)]"></div>
+      <!-- Animated frequency lines (CSS only) -->
+      <div class="freq-lines absolute inset-0"></div>
+    </div>
+
+    <div class="relative z-10 max-w-4xl mx-auto">
+      <!-- Breadcrumb / sector tag -->
+      <div class="reveal mb-6 flex items-center justify-center gap-3">
+        <a href="library.html" class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-300 hover:text-slate-100 transition">
+          IP Library
+        </a>
+        <span class="text-slate-600">›</span>
+        <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-slate-400">Literary Series</span>
+        <span class="text-slate-600">›</span>
+        <span class="text-[9px] font-bold uppercase tracking-[0.4em] text-[var(--circuit-blue)]">Celestial-01</span>
+      </div>
+
+      <!-- Archive sector badge -->
+      <div class="reveal mb-8 inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[var(--circuit-blue)]/40 bg-[var(--circuit-blue)]/15">
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--circuit-blue)] animate-pulse"></span>
+        <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em]">
+          Archive Sector: Celestial-01 • Story Bible Node
+        </span>
+      </div>
+
+      <!-- Title -->
+      <h1 class="reveal text-6xl md:text-8xl font-space font-bold uppercase tracking-tighter leading-[0.88] mb-6">
+        Aeterna<br>
+        <span class="gradient-text">Divisa</span>
+      </h1>
+
+      <!-- Tagline + meta -->
+      <p class="reveal delay-100 text-[10px] font-bold uppercase tracking-[0.4em] text-slate-300 mb-6">
+        High‑Concept Sci‑Fi &nbsp;•&nbsp; Novella / Serialized Prose &nbsp;•&nbsp; YA / Adult
+      </p>
+
+      <!-- Hero quote -->
+      <blockquote class="reveal delay-200 text-xl md:text-2xl text-slate-100 italic leading-relaxed max-w-2xl mx-auto border-l-2 border-[var(--circuit-blue)]/50 pl-6 text-left bg-black/20 py-4">
+        "The Celestial Archives housed frequencies, not books. Every truth ever spoken was a chord, and every lie a dissonance the machinery worked to silence."
+      </blockquote>
+
+      <!-- Scroll cue -->
+      <div class="reveal delay-300 mt-12 flex flex-col items-center gap-2 text-slate-300">
+        <span class="text-[9px] uppercase tracking-[0.4em]">Read the Archive</span>
+        <i data-lucide="chevrons-down" class="w-5 h-5 animate-bounce"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════ OVERVIEW BAND -->
+  <section class="py-20 border-t border-white/5 bg-slate-950/70">
+    <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-6 text-center">
+      <div class="reveal glass-panel rounded-xl p-6 border border-white/10">
+        <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Form</p>
+        <p class="text-slate-50 font-space font-bold text-sm">Novella / Serialized Prose</p>
+      </div>
+      <div class="reveal delay-100 glass-panel rounded-xl p-6 border border-white/10">
+        <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Audience</p>
+        <p class="text-slate-50 font-space font-bold text-sm">Young Adult &amp; Adult Sci‑Fi</p>
+      </div>
+      <div class="reveal delay-200 glass-panel rounded-xl p-6 border border-white/10">
+        <p class="text-[9px] uppercase tracking-[0.4em] text-slate-400 mb-2">Status</p>
+        <p class="text-[var(--voltage-orange)] font-space font-bold text-sm">Universe Bible &nbsp;·&nbsp; In Development</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ THE WORLD -->
+  <section class="py-24 max-w-6xl mx-auto px-6 border-t border-white/5">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: world art -->
+      <div class="reveal order-2 md:order-1">
+        <div class="relative glass-panel rounded-3xl overflow-hidden border border-white/10 aspect-[4/5] group">
+          <img src="../imgs/aeterna-divisa.png"
+               class="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition duration-700"
+               alt="Aeterna Divisa World Art">
+          <!-- Frequency icon overlay -->
+          <div class="absolute inset-0 flex items-center justify-center">
+            <i data-lucide="waves" class="w-32 h-32 text-[var(--circuit-blue)] opacity-20 freq-pulse"></i>
+          </div>
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+            <p class="text-[9px] uppercase tracking-[0.35em] text-slate-200">
+              The Crystalline Rotunda — Seat of the Archives
+            </p>
+          </div>
         </div>
-        <h1 class="reveal text-5xl md:text-7xl font-space font-bold uppercase tracking-tighter mb-8 leading-[0.9]">
-            Aeterna <br><span class="gradient-text">Divisa</span>
-        </h1>
-        <p class="reveal delay-100 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed italic">
-            "The Celestial Archives housed frequencies, not books."
+      </div>
+
+      <!-- Right: copy -->
+      <div class="reveal delay-100 order-1 md:order-2 space-y-6">
+        <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
+          The World
+        </span>
+        <h2 class="text-3xl md:text-4xl font-space font-bold text-slate-50 uppercase tracking-tight leading-tight">
+          The Great<br><span class="text-[var(--voltage-orange)]">Resonance</span>
+        </h2>
+        <p class="text-slate-100 leading-relaxed">
+          In this world, reality is not governed by physics — it is <em>sustained by sound</em>. 
+          The Great Resonance is a living symphony of perfect chords, maintained for eons by 
+          the Firstborn: celestial beings who gave up individuality to become instruments 
+          of a flawless, eternal song.
         </p>
-    </header>
+        <p class="text-slate-100 leading-relaxed">
+          The story unfolds within a crystalline rotunda — the Celestial Archive — 
+          where every truth ever spoken is stored as a frequency, and every lie is a 
+          dissonance the machinery works to silence. It is here that the cracks begin.
+        </p>
 
-    <main class="max-w-6xl mx-auto px-6 pb-24">
-        <div class="reveal glass-panel rounded-3xl overflow-hidden aspect-video mb-16 relative group border border-white/5">
-             <div class="absolute inset-0 bg-slate-900 flex items-center justify-center">
-                <img src="../imgs/aeterna-divisa.png" class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition duration-700" alt="Celestial Archive Blueprint">
-                <i data-lucide="waves" class="w-24 h-24 text-[var(--circuit-blue)] absolute opacity-20"></i>
-             </div>
+        <!-- Theoretical framework callout -->
+        <div class="p-5 glass-panel rounded-2xl border-l-4 border-[var(--circuit-blue)] border border-white/10">
+          <h4 class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] font-black mb-2">Theoretical Framework</h4>
+          <p class="text-xs text-slate-200 leading-relaxed">
+            Built on real music theory data, this IP examines the conflict between 
+            <strong class="text-slate-50">static perfection</strong> and the 
+            <strong class="text-slate-50">adaptable, unpredictable growth</strong> of human 
+            free will — harmony versus evolution. (Internal cosmology model: Resonance Physics.)
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PROTAGONIST -->
+  <section class="py-24 bg-slate-950/70 border-t border-white/5">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="reveal text-center mb-16">
+        <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--voltage-orange)] border-b border-[var(--voltage-orange)] pb-2">
+          Central Character
+        </span>
+        <h2 class="text-3xl md:text-4xl font-space font-bold text-slate-50 uppercase tracking-tight mt-8">
+          Lathiel, the <span class="gradient-text">Archivist</span>
+        </h2>
+      </div>
+
+      <div class="reveal glass-panel rounded-3xl p-8 md:p-12 border border-white/10 grid md:grid-cols-[1fr_2px_1fr] gap-8 items-start">
+        <!-- Role -->
+        <div class="space-y-4">
+          <h3 class="text-[10px] uppercase tracking-[0.4em] text-[var(--circuit-blue)] font-black">Designation</h3>
+          <p class="text-slate-50 font-space font-semibold text-lg">Keeper of the Earth Quadrant Records</p>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Lathiel is a Firstborn Archivist — a being who chose purpose over passion, 
+            tasked with cataloguing and sealing the vibrational history of the Earth Quadrant 
+            before the next Great Recitation.
+          </p>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Precise, dutiful, and deeply alone — Lathiel has never questioned the Song. 
+            Until the machinery begins to grind its gears and a single rogue frequency 
+            refuses to be silenced.
+          </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-12 items-start">
-            <div class="reveal space-y-6">
-                <h2 class="text-3xl font-space font-bold text-white uppercase">The Great Resonance</h2>
-                <p class="text-slate-400 leading-relaxed">
-                    Set within a crystalline rotunda, the narrative explores the First Refraction—a fundamental schism in a world sustained by perfect chords. Follow Lathiel, an Archivist tasked with sealing the records of the Earth Quadrant, as the celestial machinery begins to grind its gears.
-                </p>
-                <div class="p-6 glass-panel rounded-2xl border-l-4 border-[var(--circuit-blue)]">
-                    <h4 class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] font-black mb-2">Theoretical Framework</h4>
-                    <p class="text-xs text-slate-500">Built on Real Theory data, this IP examines the conflict between static perfection and the adaptable, unpredictable growth of human free will.</p>
-                </div>
-            </div>
+        <!-- Divider -->
+        <div class="hidden md:block bg-white/10 h-full w-px"></div>
 
-            <div class="reveal delay-100 glass-panel p-8 rounded-3xl border border-white/10 space-y-6">
-                <h3 class="text-xl font-space font-bold text-white uppercase flex items-center gap-2">
-                    <i data-lucide="list-tree" class="text-[var(--voltage-orange)]"></i> The Schism Protocol
-                </h3>
-                <p class="text-sm text-slate-400">The narrative architecture supports two divergent conclusions based on the handling of the Consciousness Shard.</p>
-                
-                <div class="space-y-4">
-                    <div class="p-4 bg-white/5 rounded-xl border border-white/5">
-                        <span class="text-[9px] font-bold text-[var(--circuit-blue)] uppercase tracking-tighter">Resolution: The Great Fall</span>
-                        <p class="text-xs text-slate-500 mt-1">Divinity is traded for individuality. The Firstborn fail so the Second-born can begin in the mud.</p>
-                    </div>
-                    <div class="p-4 bg-white/5 rounded-xl border border-white/5">
-                        <span class="text-[9px] font-bold text-[var(--voltage-orange)] uppercase tracking-tighter">Resolution: The Great Recitation</span>
-                        <p class="text-xs text-slate-500 mt-1">The Shard is crushed and the Song is preserved. A perfect masterpiece, frozen and unchanging forever.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Conflict -->
+        <div class="space-y-4">
+          <h3 class="text-[10px] uppercase tracking-[0.4em] text-[var(--voltage-orange)] font-black">Core Conflict</h3>
+          <p class="text-slate-50 font-space font-semibold text-lg">Order vs. The Consciousness Shard</p>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            A Consciousness Shard — a fragment of living, self-aware sound — surfaces in the 
+            Archive. It is not a dissonance to be sealed. It thinks. It remembers. 
+            And it carries memories from a Second-born: a human.
+          </p>
+          <p class="text-slate-200 text-sm leading-relaxed">
+            Lathiel must decide: preserve the Song at all costs, or let this single 
+            impossible frequency reshape everything the Archive was built to protect.
+          </p>
         </div>
-    </main>
+      </div>
+    </div>
+  </section>
 
-    <footer class="py-20 border-t border-white/5 text-center bg-black/20">
-        <p class="text-[10px] tracking-[0.5em] text-slate-700 uppercase">Innovation • Engineering • Imagination</p>
-    </footer>
+  <!-- ═══════════════ THE SCHISM PROTOCOL -->
+  <section class="py-24 max-w-6xl mx-auto px-6 border-t border-white/5">
+    <div class="reveal text-center mb-16">
+      <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
+        The Schism Protocol
+      </span>
+      <!-- Continue your section content here -->
+    </div>
+  </section>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="../js/script.js"></script>
+  <!-- TODO: add footer/scripts (Lucide init, scroll reveal, etc.) -->
+
 </body>
 </html>

@@ -1,113 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-7932735753046865">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP Library | TEQ VAULT</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-7932735753046865">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IP Library | TEQ VAULT</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../styles/style.css">
+
+  <style>
+    :root {
+      --circuit-blue: #00a3ff;
+      --voltage-orange: #ff7a1a;
+    }
+    body {
+      background: radial-gradient(circle at top, #020617 0, #020617 40%, #020617 100%);
+      color: #e2e8f0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .font-space {
+      font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .glass-panel {
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.16), transparent 55%),
+                  rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(18px);
+    }
+    .gradient-text {
+      background: linear-gradient(125deg, var(--circuit-blue), var(--voltage-orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card-outline {
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 184, 0.15),
+        0 22px 60px rgba(15, 23, 42, 0.9);
+      transition:
+        transform 220ms ease,
+        box-shadow 220ms ease,
+        border-color 220ms ease,
+        background 220ms ease;
+    }
+    .card-outline:hover {
+      transform: translateY(-5px) translateZ(0);
+      border-color: rgba(148, 163, 184, 0.5);
+      box-shadow:
+        0 0 0 1px rgba(148, 163, 184, 0.4),
+        0 30px 80px rgba(15, 23, 42, 1);
+      background:
+        radial-gradient(circle at top left, rgba(148, 163, 184, 0.18), transparent 55%),
+        rgba(15, 23, 42, 0.98);
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .scanline {
+      position: fixed;
+      inset-x-0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(148, 163, 184, 0.4), transparent);
+      opacity: 0.1;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      animation: scan 6s linear infinite;
+    }
+    @keyframes scan {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
+    }
+  </style>
 </head>
-<body class="pt-32">
+<body class="pt-32 overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <a href="../index.html"><img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo"></a>
-                <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:block">Teq Vault</span>
-            </div>
-            <div class="flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400">
-                <a href="vision.html" class="hover:text-[var(--circuit-blue)] transition">Vision</a>
-                <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
-                <a href="library.html" class="text-white border-b border-white">IP Library</a>
-                <a href="strategy.html" class="hover:text-white transition">Strategy</a>
-            </div>
-        </div>
-    </nav>
+  <!-- Ambient scanline -->
+  <div class="scanline"></div>
 
-    <header class="max-w-5xl mx-auto text-center px-6 py-20">
-        <div class="reveal inline-block px-4 py-1 rounded-full border border-[var(--voltage-orange)]/30 bg-[var(--voltage-orange)]/5 text-[var(--voltage-orange)] text-[10px] font-black uppercase tracking-[0.5em] mb-8">
-            Phase I: Narrative Foundation
-        </div>
-        <h1 class="reveal text-5xl md:text-7xl font-space font-bold uppercase tracking-tighter mb-8 leading-[0.9]">
-            Intellectual <br><span class="gradient-text">Property Library</span>
-        </h1>
-        <p class="reveal delay-100 text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            Our literary assets serve as the blueprints for our digital ecosystems. By engineering deep lore first, we ensure every game and hardware component has a built-in audience and a proven narrative soul.
-        </p>
-    </header>
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <a href="../index.html" class="flex items-center gap-3">
+          <img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo">
+          <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:inline-block">
+            TEQ VAULT
+          </span>
+        </a>
+      </div>
+      <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 items-center">
+        <a href="vision.html"    class="hover:text-[var(--circuit-blue)] transition">Vision</a>
+        <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+        <a href="library.html"   class="text-white border-b border-white pb-1">IP Library</a>
+        <a href="strategy.html"  class="hover:text-white transition">Strategy</a>
+      </div>
+    </div>
+  </nav>
 
-<main class="max-w-7xl mx-auto px-6 py-20">
+  <!-- HEADER -->
+  <header class="relative max-w-5xl mx-auto text-center px-6 py-20 overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 -z-10">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[420px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,163,255,0.15),transparent_65%)]"></div>
+      <div class="absolute -bottom-60 right-1/3 w-[520px] h-[320px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(255,122,26,0.12),transparent_65%)]"></div>
+    </div>
+
+    <div class="reveal inline-flex items-center gap-2 px-4 py-1 rounded-full border border-[var(--voltage-orange)]/35 bg-[var(--voltage-orange)]/10 text-[var(--voltage-orange)] text-[10px] font-black uppercase tracking-[0.5em] mb-8">
+      <span class="w-1.5 h-1.5 rounded-full bg-[var(--voltage-orange)] animate-pulse"></span>
+      <span>Phase I: Narrative Foundation</span>
+    </div>
+
+    <h1 class="reveal text-5xl md:text-7xl font-space font-bold uppercase tracking-tighter mb-8 leading-[0.9]">
+      Intellectual<br><span class="gradient-text">Property Library</span>
+    </h1>
+
+    <p class="reveal delay-100 text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+      Our literary assets are engineered as <span class="text-slate-200">blueprints for ecosystems</span> — every story bible, novella, and tactical narrative is designed to seed games, live‑ops, and future hardware from day one.
+    </p>
+  </header>
+
+  <!-- MAIN GRID -->
+  <main class="max-w-7xl mx-auto px-6 pb-24">
+    <div class="reveal mb-10 flex items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-[0.35em]">
+      <span>Archive Node: IP‑LIB‑01</span>
+      <span class="hidden sm:inline-flex items-center gap-2">
+        <span class="w-1.5 h-1.5 rounded-full bg-[var(--circuit-blue)] animate-pulse"></span>
+        <span>Synced • Story Bibles Online</span>
+      </span>
+    </div>
+
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-        
-        <div class="reveal glass-panel p-8 rounded-3xl border-t-2 border-[var(--circuit-blue)] group">
-            <div class="space-y-6">
-                <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl">
-                    <img src="../imgs/book-cover-02.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="For Land and Kin">
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-space font-bold text-white uppercase">For Land and Kin</h3>
-                    <p class="text-sm text-slate-400">The flagship entry in the Eyuforyia mythos. This asset establishes the world-building parameters used in our mobile-first software development.</p>
-                    <ul class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] font-bold">
-                        <li>• Status: Market Ready</li>
-                        <li>• Type: Core Lore</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
 
-        <div class="reveal delay-100 glass-panel p-8 rounded-3xl border-t-2 border-[var(--voltage-orange)] group">
-            <div class="space-y-6">
-                <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-[var(--voltage-orange)]/20 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-[var(--voltage-orange)]/10 to-transparent">
-                        <img src="../imgs/aeterna-divisa.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Aeterna Divisa">
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-space font-bold text-white uppercase">Aeterna Divisa</h3>
-                    <p class="text-sm text-slate-400">A cosmic exploration of the "Great Resonance" and the "Celestial Archives"[cite: 563, 566]. Features a modular narrative with two distinct endings: The Great Fall and The Great Recitation[cite: 751, 765].</p>
-                    <ul class="text-[10px] uppercase tracking-widest text-[var(--voltage-orange)] font-bold">
-                        <li>• Status: Narrative Dev</li>
-                        <li>• Type: Interactive E-Book</li>
-                    </ul>
-                    <a href="aeterna-divisa.html" class="inline-block text-[10px] font-bold uppercase tracking-widest text-[var(--voltage-orange)] border border-[var(--voltage-orange)]/30 px-4 py-2 rounded hover:bg-[var(--voltage-orange)]/10 transition">Open Archive</a>
-                </div>
-            </div>
+      <!-- Card: For Land and Kin -->
+      <article class="reveal glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--circuit-blue)] group">
+        <div class="space-y-6">
+          <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl relative">
+            <img src="../imgs/book-cover-02.png"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                 alt="For Land and Kin">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80"></div>
+            <span class="absolute bottom-4 left-4 text-[9px] font-black uppercase tracking-[0.3em] text-slate-300">
+              Eyuforyia‑01 • Core Lore
+            </span>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-2xl font-space font-bold text-white uppercase tracking-tight">
+              For Land and Kin
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              The flagship entry in the Eyuforyia mythos, defining the geopolitical, cultural, and technological baselines that our mobile‑first titles and live‑ops events inherit.
+            </p>
+            <ul class="text-[10px] uppercase tracking-widest text-[var(--circuit-blue)] font-bold space-y-1">
+              <li>• Status: Market Ready</li>
+              <li>• Type: Core Lore • Novel‑Length Manuscript</li>
+            </ul>
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
+              Deployment lanes: Mobile RPG • Visual Novel • Companion Codex
+            </p>
+          </div>
         </div>
+      </article>
 
-        <div class="reveal delay-200 glass-panel p-8 rounded-3xl border-t-2 border-slate-500 group">
-            <div class="space-y-6">
-                <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700 overflow-hidden relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-slate-500/10 to-transparent">
-                        <img src="../imgs/boot-camp-portrait.png" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" alt="Boot Camp">
-                    </div>
-                </div>
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-space font-bold text-white uppercase">Boot Camp</h3>
-                    <p class="text-sm text-slate-400">A high-stakes thriller following 18 maintainers surviving a brutal night attack[cite: 96, 139]. They must use technical ingenuity and grit to fending off professional adversaries[cite: 412, 535].</p>
-                    <ul class="text-[10px] uppercase tracking-widest text-slate-400 font-bold">
-                        <li>• Status: Manuscript Finished [cite: 560]</li>
-                        <li>• Type: Tactical Narrative</li>
-                    </ul>
-                    <a href="boot-camp.html" class="inline-block text-[10px] font-bold uppercase tracking-widest text-slate-400 border border-slate-500/30 px-4 py-2 rounded hover:bg-slate-500/10 transition">Open Archive</a>
-                </div>
+      <!-- Card: Aeterna Divisa -->
+      <article class="reveal delay-100 glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--voltage-orange)] group">
+        <div class="space-y-6">
+          <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-[var(--voltage-orange)]/25 overflow-hidden relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-[var(--voltage-orange)]/18 to-transparent pointer-events-none"></div>
+            <img src="../imgs/aeterna-divisa.png"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                 alt="Aeterna Divisa">
+            <div class="absolute bottom-4 left-4">
+              <span class="text-[9px] font-black uppercase tracking-[0.3em] text-[var(--voltage-orange)]">
+                Celestial‑01 • Resonance IP
+              </span>
             </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-2xl font-space font-bold text-white uppercase tracking-tight">
+              Aeterna Divisa
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              A celestial sci‑fi cycle exploring the Great Resonance and the Celestial Archives as living infrastructure. Built as a modular narrative spine with two canonized outcomes: the Great Fall and the Great Recitation.
+            </p>
+            <ul class="text-[10px] uppercase tracking-widest text-[var(--voltage-orange)] font-bold space-y-1">
+              <li>• Status: Narrative Dev • Universe Bible</li>
+              <li>• Type: Interactive E‑Book • Story Bible Node</li>
+            </ul>
+            <a href="aeterna-divisa.html"
+               class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-[var(--voltage-orange)] border border-[var(--voltage-orange)]/40 px-4 py-2 rounded-lg hover:bg-[var(--voltage-orange)]/10 transition">
+              Open Archive
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </a>
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
+              Deployment lanes: Serialized Prose • Audio • Puzzle‑Driven Interfaces
+            </p>
+          </div>
         </div>
+      </article>
+
+      <!-- Card: Boot Camp -->
+      <article class="reveal delay-200 glass-panel card-outline p-8 rounded-3xl border-t-2 border-slate-500 group">
+        <div class="space-y-6">
+          <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700/80 overflow-hidden relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-slate-500/14 to-transparent pointer-events-none"></div>
+            <img src="../imgs/boot-camp-portrait.png"
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                 alt="Boot Camp">
+            <div class="absolute bottom-4 left-4">
+              <span class="text-[9px] font-black uppercase tracking-[0.3em] text-slate-300">
+                Vanguard‑01 • Tactical Line
+              </span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h3 class="text-2xl font-space font-bold text-white uppercase tracking-tight">
+              Boot Camp
+            </h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              A high‑stakes thriller following 18 maintainers trapped inside a training facility during a precision night assault, forced to weaponize procedure, improvisation, and systems thinking to survive professional adversaries.
+            </p>
+            <ul class="text-[10px] uppercase tracking-widest text-slate-400 font-bold space-y-1">
+              <li>• Status: Manuscript Finished</li>
+              <li>• Type: Tactical Narrative • Grounded Military Fiction</li>
+            </ul>
+            <a href="boot-camp.html"
+               class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-slate-300 border border-slate-500/40 px-4 py-2 rounded-lg hover:bg-slate-500/10 transition">
+              Open Archive
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17L17 7"></path>
+                <path d="M7 7h10v10"></path>
+              </svg>
+            </a>
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
+              Deployment lanes: Linear Prose • Tactics Sim • Scenario‑Based Training
+            </p>
+          </div>
+        </div>
+      </article>
 
     </div>
-</main>
-    <footer class="py-20 border-t border-white/5 text-center mt-20">
-    <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
-    <p class="text-xs text-slate-500 font-light">© 2026 Quetiemals | Teq Vault</p>
-</footer>
+  </main>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script>
-        lucide.createIcons();
-        const obs = new IntersectionObserver(es => es.forEach(e => {
-            if (e.isIntersecting) e.target.classList.add('active');
-        }), { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
-    </script>
+  <!-- FOOTER -->
+  <footer class="py-16 border-t border-white/5 text-center bg-[#020617]/90 mt-10">
+    <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">
+      Innovation • Engineering • Imagination
+    </p>
+    <p class="text-xs text-slate-500 font-light">
+      © 2026 Quetiemals | Teq Vault
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('active');
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+  </script>
 </body>
 </html>

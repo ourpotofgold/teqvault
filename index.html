@@ -1,252 +1,363 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="google-adsense-account" content="ca-pub-7932735753046865">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEQ VAULT | Business Expansion Profile</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8">
+  <meta name="google-adsense-account" content="ca-pub-7932735753046865">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TEQ VAULT | Engineering Worlds, Not Just Games</title>
+  <meta name="description" content="Teq Vault LLC — Multi-disciplinary innovation hub. Games, literature, and future hardware built from an engineering-first core.">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font: Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+  >
+
+  <!-- Lucide Icons (optional, for data-lucide="...") -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="/style.css">
+
+  <style>
+    :root {
+      --circuit-blue: #00a3ff;
+      --voltage-orange: #ff7a1a;
+    }
+    body {
+      font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #050810;
+      color: #e2e8f0;
+    }
+    .font-space {
+      font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .glass-panel {
+      background: radial-gradient(circle at top left, rgba(148, 163, 184, 0.14), transparent 55%),
+                  rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(18px);
+    }
+    .btn-vault {
+      background: linear-gradient(135deg, rgba(0, 163, 255, 0.28), rgba(255, 122, 26, 0.32));
+      color: #e5f2ff;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+    }
+    .btn-vault:hover {
+      background: linear-gradient(135deg, rgba(0, 163, 255, 0.38), rgba(255, 122, 26, 0.42));
+    }
+    .logo-glow {
+      box-shadow:
+        0 0 120px rgba(0, 163, 255, 0.45),
+        0 0 40px rgba(15, 23, 42, 0.9) inset;
+    }
+    .card-hover {
+      transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.45);
+    }
+    .gradient-text {
+      background: linear-gradient(120deg, var(--circuit-blue), var(--voltage-orange));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    /* Simple reveal animation hook (optional – animate with JS if you want) */
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: opacity 600ms ease, transform 600ms ease;
+    }
+  </style>
 </head>
 <body class="antialiased">
 
-<nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+  <!-- ═══════════════════ NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
-        </div>
+      <div class="flex items-center gap-3">
+        <img src="imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Teq Vault Logo">
+      </div>
 
-        <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 items-center">
-            <a href="#mission" class="hover:text-[var(--circuit-blue)] transition">Mission</a>
-            <a href="#ecosystem" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
-            <a href="pages/library.html" class="hover:text-white transition">IP Library</a> 
-            <a href="#roadmap" class="hover:text-white transition">Roadmap</a>
-            <a href="pages/join-the-vault.html" class="text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/30 px-3 py-1.5 rounded hover:bg-[var(--circuit-blue)]/10 transition">Careers</a>
-            <a href="#contact" class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition">Contact</a>
-        </div>
+      <div class="hidden md:flex gap-8 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 items-center">
+        <a href="#mission"     class="nav-link hover:text-[var(--circuit-blue)] transition">Overview</a>
+        <a href="#quetiemals"  class="nav-link hover:text-[var(--voltage-orange)] transition">Quetiemals</a>
+        <a href="#ecosystem"   class="nav-link hover:text-white transition">Ecosystem</a>
+        <a href="pages/library.html" class="nav-link hover:text-white transition">IP Library</a>
+        <a href="#roadmap"     class="nav-link hover:text-white transition">Roadmap</a>
+        <a href="pages/join-the-vault.html"
+           class="text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/30 px-3 py-1.5 rounded hover:bg-[var(--circuit-blue)]/10 transition">
+          Careers
+        </a>
+        <a href="#contact"
+           class="text-white border border-white/20 px-3 py-1.5 rounded hover:bg-white/5 transition">
+          Contact
+        </a>
+      </div>
 
-        <button id="mobile-menu-btn" class="block md:hidden text-white p-2">
-            <span id="menu-icon-container">
-                <i data-lucide="menu"></i>
-            </span>
-        </button>
+      <button id="mobile-menu-btn" class="block md:hidden text-white p-2" aria-label="Toggle menu">
+        <span id="menu-icon-container"><i data-lucide="menu"></i></span>
+      </button>
     </div>
 
     <div id="mobile-menu" class="hidden md:hidden bg-[#050810] border-b border-white/5 px-6 py-8 space-y-6 text-center">
-        <a href="#mission" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Mission</a>
-        <a href="#ecosystem" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Ecosystem</a>
-        <a href="pages/library.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">IP Library</a>
-        <a href="#roadmap" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">Roadmap</a>
-        <a href="pages/join-the-vault.html" class="block text-sm font-bold uppercase tracking-widest text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/20 py-3 rounded-lg">Careers</a>
-        <a href="#contact" class="block text-sm font-bold uppercase tracking-widest text-white border border-white/20 py-3 rounded-lg">Contact</a>
+      <a href="#mission"     class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white mobile-link">Overview</a>
+      <a href="#quetiemals"  class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white mobile-link">Quetiemals</a>
+      <a href="#ecosystem"   class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white mobile-link">Ecosystem</a>
+      <a href="pages/library.html" class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white">IP Library</a>
+      <a href="#roadmap"     class="block text-sm font-bold uppercase tracking-widest text-slate-400 hover:text-white mobile-link">Roadmap</a>
+      <a href="pages/join-the-vault.html"
+         class="block text-sm font-bold uppercase tracking-widest text-[var(--circuit-blue)] border border-[var(--circuit-blue)]/20 py-3 rounded-lg">
+        Careers
+      </a>
+      <a href="#contact"
+         class="block text-sm font-bold uppercase tracking-widest text-white border border-white/20 py-3 rounded-lg mobile-link">
+        Contact
+      </a>
     </div>
-</nav>
+  </nav>
 
-    <header id="mission" class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 relative">
-        <div class="reveal mb-12">
-            <img src="imgs/tvault.png" class="w-full max-w-3xl drop-shadow-[0_0_50px_rgba(0,163,255,0.25)] scale-110" alt="Teq Vault Chiseled Logo">
+  <!-- ═══════════════════ HERO -->
+  <header id="mission" class="min-h-screen flex items-center justify-center px-6 pt-24 relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0">
+      <div class="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[radial-gradient(ellipse,rgba(0,163,255,0.12),transparent_65%)]"></div>
+      <div class="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] bg-[radial-gradient(ellipse,rgba(255,122,26,0.08),transparent_65%)]"></div>
+    </div>
+
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="space-y-6 reveal">
+        <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)]">
+          Multi‑Disciplinary Innovation Hub
+        </span>
+        <h1 class="text-3xl md:text-5xl font-space text-white font-semibold leading-tight">
+          Engineering Worlds,<br>Not Just Games.
+        </h1>
+        <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+          Teq Vault LLC is a multi‑disciplinary innovation hub where storytelling meets technical mastery —
+          building interactive software, digital artistry, and future hardware from the same engineering‑first core.
+        </p>
+        <p class="text-slate-500 text-sm">
+          We collaborate with studios, founders, and publishers to prototype IP, build vertical slices,
+          and design production‑ready systems that can scale.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#quetiemals"
+             class="btn-vault px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-[0.2em] flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i> Explore Quetiemals
+          </a>
+          <a href="#ecosystem"
+             class="px-6 py-3 rounded-lg border border-white/20 text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:bg-white/5 transition">
+            Studio Overview
+          </a>
         </div>
-        
-        <div class="reveal delay-100 max-w-4xl mx-auto mt-8">
-            <h1 class="text-3xl md:text-5xl font-space italic text-white leading-tight font-medium">
-                "To bridge the gap between imagination and engineering by creating immersive digital worlds, compelling literature, and the physical technology that brings them to life."
-            </h1>
+      </div>
+
+      <div class="reveal delay-100 relative flex items-center justify-center">
+        <div class="absolute inset-0 bg-[radial-gradient(circle,rgba(0,163,255,0.15),transparent_60%)]"></div>
+        <div class="relative glass-panel rounded-2xl border border-white/10 p-8 flex items-center justify-center logo-glow">
+          <img src="imgs/tvault.png"
+               class="w-full max-w-sm drop-shadow-[0_0_60px_rgba(0,163,255,0.4)]"
+               alt="Teq Vault Logo">
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <section id="ecosystem" class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
-        <div class="text-center mb-16 reveal">
-            <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--circuit-blue)] pb-2">About Us</span>
-            <h2 class="text-4xl md:text-5xl font-bold mt-8 font-space uppercase tracking-tighter">The Architecture of <span class="text-[var(--voltage-orange)]">Innovation</span></h2>
-            <p class="text-slate-400 mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
-                Teq Vault LLC is more than a creative studio; it is a multi-disciplinary innovation hub where storytelling meets technical mastery. Founded on the belief that the best entertainment is built on robust engineering, we operate at the intersection of interactive software, digital artistry, and future hardware development.
-            </p>
+  <!-- ═══════════════════ QUETIEMALS -->
+  <section id="quetiemals" class="py-24 bg-slate-950/40 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.3fr_minmax(0,1fr)] gap-10 items-center">
+      <div class="reveal space-y-5">
+        <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--voltage-orange)] border-b border-[var(--voltage-orange)] pb-2">
+          Flagship IP
+        </span>
+        <h2 class="text-3xl md:text-4xl font-space font-bold text-white uppercase tracking-tight">
+          Quetiemals<br>
+          <span class="text-[var(--circuit-blue)] text-xl md:text-2xl font-medium normal-case tracking-normal">
+            Match‑3 RPG Action
+          </span>
+        </h2>
+        <p class="text-slate-400 text-base leading-relaxed">
+          A mobile‑first match‑3 RPG fusing quick‑thinking puzzle combat with collectible creature strategy —
+          built to scale from global app stores to PC and console ports.
+        </p>
+        <ul class="text-slate-300 text-sm space-y-2 list-none">
+          <li><span class="text-[var(--circuit-blue)] mt-0.5">▸</span> Mobile beta targeting global launch with a scalable live‑ops content pipeline.</li>
+          <li><span class="text-[var(--circuit-blue)] mt-0.5">▸</span> "Snackable" sessions that reward long‑term mastery and collectible depth.</li>
+          <li><span class="text-[var(--circuit-blue)] mt-0.5">▸</span> Lore, factions, and characters built to support books and transmedia spin‑offs.</li>
+        </ul>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="https://www.youtube.com/shorts/uiNZrAJxSjM" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[var(--circuit-blue)]/20 border border-[var(--circuit-blue)]/40 text-xs font-bold uppercase tracking-[0.2em] text-[var(--circuit-blue)] hover:bg-[var(--circuit-blue)]/35 transition">
+            <i data-lucide="play-circle" class="w-4 h-4"></i> View Gameplay
+          </a>
+          <a href="#contact"
+             class="inline-flex items-center gap-2 px-5 py-3 rounded-lg border border-white/20 text-xs font-bold uppercase tracking-[0.2em] text-slate-200 hover:bg-white/5 transition">
+            Request Press / Pitch Deck
+          </a>
         </div>
+      </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-[var(--circuit-blue)] relative overflow-hidden group">
-                <div class="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-500">
-                    <img src="imgs/screenshot-2026-02-25-180950.png" class="w-full h-full object-cover" alt="Quetiemals">
-                </div>
-                <div class="relative z-10">
-                    <h3 class="font-bold text-2xl mb-4 text-white font-space">Interactive Entertainment</h3>
-                    <ul class="text-sm text-slate-400 space-y-3">
-                        <li><strong>Flagship Project:</strong> Quetiemals (Beta). Central focus on mobile-first accessibility with a strategic pipeline to port to PC and high-end consoles.</li>
-                        <li><strong>Development Depth:</strong> Three titles in mid-stage development, two in conceptualization to ensure a steady release rhythm.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="reveal delay-100 glass-panel p-8 rounded-xl border-t-2 border-[var(--voltage-orange)] relative overflow-hidden group">
-                <div class="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-500">
-                    <img src="imgs/screenshot-2026-02-27-181846.png" class="w-full h-full object-cover" alt="Literary World">
-                </div>
-                <div class="relative z-10">
-                    <h3 class="font-bold text-2xl mb-4 text-white font-space">Literary Publishing</h3>
-                    <ul class="text-sm text-slate-400 space-y-3">
-                        <li><strong>Primary Demographic:</strong> Kids, teens, and young adults.</li>
-                        <li><strong>Strategic Synergy:</strong> Producing books alongside games to create "Transmedia IPs." Captures a younger audience through storytelling, converting them into a loyal player base.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="reveal delay-200 glass-panel p-8 rounded-xl border-t-2 border-[var(--circuit-blue)] relative overflow-hidden group">
-                <div class="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-500">
-                    <img src="imgs/featured.jpg" class="w-full h-full object-cover" alt="Hardware Future">
-                </div>
-                <div class="relative z-10">
-                    <h3 class="font-bold text-2xl mb-4 text-white font-space">Future Horizons</h3>
-                    <ul class="text-sm text-slate-400 space-y-3">
-                        <li><strong>Electronics Manufacturing:</strong> Transitioning from software to hardware. Creating physical tools that complement the software ecosystem.</li>
-                        <li><strong>Advanced Software:</strong> Expanding beyond entertainment into utility and specialized software to solve broader industry challenges.</li>
-                    </ul>
-                </div>
-            </div>
+      <div class="reveal delay-100">
+        <div class="relative glass-panel rounded-2xl overflow-hidden border border-white/10 aspect-video">
+          <img src="imgs/screenshot-2026-02-25-180950.png"
+               class="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition duration-700"
+               alt="Quetiemals Gameplay">
+          <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+            <span class="text-[10px] uppercase tracking-[0.25em] text-slate-300">Beta • Mobile‑First • RPG</span>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="roadmap" class="py-24 bg-slate-900/20 border-t border-white/5">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="reveal text-center mb-16">
-                <h2 class="text-4xl font-bold font-space uppercase tracking-tighter">Strategic <span class="gradient-text">Pillars</span> &amp; Roadmap</h2>
-                <p class="text-slate-400 mt-4">Three major phases moving from mobile foundation to hardware manufacturing.</p>
-            </div>
-            
-            <div class="reveal glass-panel overflow-hidden rounded-xl border border-white/5">
-                <table class="w-full text-left strategy-table">
-                    <thead class="bg-white/5 border-b border-white/5">
-                        <tr class="text-[10px] uppercase tracking-widest text-slate-500 font-black">
-                            <th class="p-6">Phase / Pillar</th>
-                            <th class="p-6">Focus</th>
-                            <th class="p-6">Objective</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-sm">
-                        <tr class="hover:bg-[var(--circuit-blue)]/5 transition border-b border-white/5">
-                            <td data-label="Pillar" class="p-6 font-bold text-[var(--circuit-blue)] font-space uppercase">Phase 1: Foundation</td>
-                            <td data-label="Focus" class="p-6 text-white">Quetiemals &amp; Mobile Games</td>
-                            <td data-label="Objective" class="p-6 text-slate-400">Establish a solid fanbase and brand recognition in the global app stores.</td>
-                        </tr>
-                        <tr class="hover:bg-[var(--voltage-orange)]/5 transition border-b border-white/5">
-                            <td data-label="Pillar" class="p-6 font-bold text-[var(--voltage-orange)] font-space uppercase">Phase 1: Crossover</td>
-                            <td data-label="Focus" class="p-6 text-white">Books &amp; Lore Building</td>
-                            <td data-label="Objective" class="p-6 text-slate-400">Build a deep intellectual property (IP) library that can be licensed or adapted.</td>
-                        </tr>
-                        <tr class="hover:bg-[var(--circuit-blue)]/5 transition border-b border-white/5">
-                            <td data-label="Pillar" class="p-6 font-bold text-[var(--circuit-blue)] font-space uppercase">Phase 2: Scaling</td>
-                            <td data-label="Focus" class="p-6 text-white">PC/Console Porting</td>
-                            <td data-label="Objective" class="p-6 text-slate-400">Transition successful mobile titles to high-fidelity platforms to reach the enthusiast market.</td>
-                        </tr>
-                        <tr class="hover:bg-[var(--voltage-orange)]/5 transition">
-                            <td data-label="Pillar" class="p-6 font-bold text-[var(--voltage-orange)] font-space uppercase">Phase 3: Innovation</td>
-                            <td data-label="Focus" class="p-6 text-white">Electronics &amp; R&amp;D</td>
-                            <td data-label="Objective" class="p-6 text-slate-400">Launch proprietary hardware or components that reflect the Teq Vault aesthetic and standard.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+  <!-- ═══════════════════ ECOSYSTEM -->
+  <section id="ecosystem" class="py-24 max-w-7xl mx-auto px-6 border-t border-white/5">
+    <div class="text-center mb-16 reveal">
+      <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--circuit-blue)] pb-2">
+        About Us
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-8 font-space uppercase tracking-tighter">
+        The Architecture of <span class="text-[var(--voltage-orange)]">Innovation</span>
+      </h2>
+      <p class="text-slate-400 mt-6 max-w-3xl mx-auto text-lg leading-relaxed">
+        Teq Vault LLC operates at the intersection of interactive software, digital artistry, and future hardware
+        development — built on the belief that the best entertainment starts with robust engineering.
+      </p>
+      <p class="text-slate-500 mt-3 max-w-2xl mx-auto text-sm">
+        We partner with studios, founders, and publishers to prototype IP, ship vertical slices,
+        and build production‑ready systems that scale.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-[var(--circuit-blue)] relative overflow-hidden group card-hover">
+        <div class="absolute inset-0 opacity-10 group-hover:opacity-25 transition-opacity duration-500">
+          <img src="imgs/screenshot-2026-02-25-180950.png" class="w-full h-full object-cover" alt="">
         </div>
-    </section>
-
-    <section id="contact" class="py-24 max-w-4xl mx-auto px-6 border-t border-white/5">
-        <div class="reveal text-center mb-12">
-            <span class="text-[var(--voltage-orange)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--voltage-orange)] pb-2">Get in Touch</span>
-            <h2 class="text-4xl font-bold mt-8 font-space uppercase tracking-tighter">Contact <span class="text-[var(--circuit-blue)]">Us</span></h2>
+        <div class="relative z-10 space-y-4">
+          <div class="w-10 h-10 rounded-lg bg-[var(--circuit-blue)]/15 border border-[var(--circuit-blue)]/30 flex items-center justify-center mb-2">
+            <i data-lucide="gamepad-2" class="w-5 h-5 text-[var(--circuit-blue)]"></i>
+          </div>
+          <h3 class="font-bold text-xl text-white font-space">Interactive Entertainment</h3>
+          <ul class="text-sm text-slate-400 space-y-2">
+            <li><span class="text-white font-semibold">Flagship:</span> Quetiemals (Beta) — mobile‑first, pipeline to PC &amp; console</li>
+          </ul>
         </div>
-        
-        <div class="reveal glass-panel p-8 md:p-12 rounded-xl border-t-2 border-[var(--circuit-blue)] relative overflow-hidden shadow-2xl">
-            
-            <form id="contactForm" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Name</label>
-                        <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Email Address</label>
-                        <input type="email" name="email" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Message</label>
-                    <textarea name="message" required rows="4" class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition"></textarea>
-                </div>
-                <button type="submit" id="submitBtn" class="btn-vault w-full py-4 rounded-lg text-white font-bold uppercase tracking-widest text-xs flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform">
-                    <i data-lucide="send" class="w-4 h-4"></i> Transmit Message
-                </button>
-            </form>
+      </div>
 
-            <div id="thankYouMessage" class="hidden text-center py-12">
-                <div class="w-20 h-20 bg-[var(--circuit-blue)]/20 rounded-full flex items-center justify-center mx-auto mb-6 border border-[var(--circuit-blue)]/30">
-                    <i data-lucide="check-circle" class="w-10 h-10 text-[var(--circuit-blue)]"></i>
-                </div>
-                <h3 class="text-3xl font-bold font-space text-white mb-4">Transmission Successful</h3>
-                <p class="text-slate-400 text-lg">Thank you for reaching out to Teq Vault. <br>Our team will review your message shortly.</p>
-            </div>
+      <!-- Add two more ecosystem cards as needed -->
+      <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-white/10 card-hover">
+        <h3 class="font-bold text-xl text-white font-space mb-3">Technical Prototyping</h3>
+        <p class="text-sm text-slate-400">
+          Systems design, vertical slices, and tooling that bridge early vision to production‑ready execution.
+        </p>
+      </div>
 
+      <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-white/10 card-hover">
+        <h3 class="font-bold text-xl text-white font-space mb-3">World‑Building & IP</h3>
+        <p class="text-sm text-slate-400">
+          Story bibles, transmedia‑ready universes, and lore architecture built for longevity across mediums.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ROADMAP (stub) -->
+  <section id="roadmap" class="py-24 border-t border-white/5 bg-slate-950/60">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--circuit-blue)] border-b border-[var(--circuit-blue)] pb-2">
+        Roadmap
+      </span>
+      <h2 class="mt-8 text-3xl md:text-4xl font-space font-bold text-white uppercase tracking-tight">
+        From Prototype to Platforms
+      </h2>
+      <p class="mt-6 text-slate-400 max-w-2xl mx-auto">
+        High‑level milestones for Quetiemals, IP expansion, and future hardware research slots.
+      </p>
+      <!-- Add your actual roadmap content/timeline here -->
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT (stub) -->
+  <section id="contact" class="py-24 max-w-4xl mx-auto px-6 border-t border-white/5">
+    <div class="text-center mb-10">
+      <span class="text-[10px] font-black uppercase tracking-[0.5em] text-[var(--voltage-orange)] border-b border-[var(--voltage-orange)] pb-2">
+        Contact
+      </span>
+      <h2 class="mt-8 text-3xl md:text-4xl font-space font-bold text-white uppercase tracking-tight">
+        Enter the Vault
+      </h2>
+      <p class="mt-4 text-slate-400 max-w-2xl mx-auto">
+        For partnerships, publishing, or studio collaboration, reach out with a short brief and we’ll respond with next steps.
+      </p>
+    </div>
+
+    <form action="https://formspree.io/f/your-id" method="POST" class="space-y-4 glass-panel rounded-2xl p-8 border border-white/10">
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Name</label>
+          <input type="text" name="name" required
+                 class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[var(--circuit-blue)]">
         </div>
-    </section>
-
-    <section id="quick-apply" class="py-24 max-w-4xl mx-auto px-6 border-t border-white/5">
-        <div class="reveal text-center mb-12">
-            <span class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] border-b border-[var(--circuit-blue)] pb-2">Join the Fleet</span>
-            <h2 class="text-4xl font-bold mt-8 font-space uppercase tracking-tighter">Quick <span class="text-[var(--voltage-orange)]">Application</span></h2>
-            <p class="text-slate-400 mt-4 text-sm">Select your discipline and transmit your credentials to the Vault.</p>
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Email</label>
+          <input type="email" name="email" required
+                 class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[var(--circuit-blue)]">
         </div>
-        
-        <div class="reveal glass-panel p-8 rounded-xl border-t-2 border-[var(--voltage-orange)] relative overflow-hidden shadow-2xl">
-            <form id="quickAppForm" class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Full Name</label>
-                        <input type="text" name="name" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Discipline</label>
-                        <select name="position" required class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--circuit-blue)] transition appearance-none cursor-pointer">
-                            <option value="Game Tester">Game Tester (Technical)</option>
-                            <option value="Proofreader">Proofreader (Narrative)</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Portfolio Link / Brief Bio</label>
-                    <textarea name="message" required rows="3" placeholder="Link to your work or a brief summary of your experience..." class="w-full bg-slate-900/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[var(--voltage-orange)] transition"></textarea>
-                </div>
-                <button type="submit" id="quickSubmitBtn" class="btn-vault w-full py-4 rounded-lg text-white font-bold uppercase tracking-widest text-xs flex justify-center items-center gap-2 hover:scale-[1.02] transition-transform bg-white/5 border border-white/10 hover:bg-[var(--voltage-orange)]/20 hover:border-[var(--voltage-orange)]">
-                    <i data-lucide="cpu" class="w-4 h-4"></i> Submit to Vault
-                </button>
-            </form>
-    
-            <div id="quickSuccessMessage" class="hidden text-center py-8">
-                <div class="w-16 h-16 bg-[var(--circuit-blue)]/20 rounded-full flex items-center justify-center mx-auto mb-4 border border-[var(--circuit-blue)]/30">
-                    <i data-lucide="check-circle" class="w-8 h-8 text-[var(--circuit-blue)]"></i>
-                </div>
-                <h3 class="text-2xl font-space font-bold text-white uppercase">Application Logged</h3>
-                <p class="text-slate-400 text-sm mt-2">Your data has been successfully transmitted to our recruitment terminal.</p>
-            </div>
-        </div>
-    </section>
+      </div>
+      <div>
+        <label class="block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">Message</label>
+        <textarea name="message" rows="4" required
+                  class="w-full bg-slate-900/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-[var(--circuit-blue)]"></textarea>
+      </div>
+      <button type="submit"
+              class="btn-vault px-6 py-3 rounded-lg text-xs font-bold uppercase tracking-[0.2em] inline-flex items-center gap-2">
+        <i data-lucide="send" class="w-4 h-4"></i>
+        Send Message
+      </button>
+    </form>
+  </section>
 
-    <footer class="py-24 px-6 text-center border-t border-white/5 relative bg-slate-950/40">
-        <div class="max-w-3xl mx-auto mb-16 reveal">
-            <h3 class="text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-4">The Teq Vault Philosophy</h3>
-            
-            <h4 class="text-3xl font-space font-bold text-white mb-6 uppercase tracking-widest">
-                <span class="text-[var(--voltage-orange)]">Less</span> is More.
-            </h4>
-            
-            <p class="text-slate-300 text-lg leading-relaxed italic">
-                "We bring 'circuit-level' precision to every project. By stripping away the unnecessary, we amplify the impact. Whether we are debugging a script for a mobile game, structuring the plot of a young adult novel, or conceptualizing a circuit board layout, our work is defined by professional quality and an engineering-first mindset. We don't just create content; we build the optimized infrastructure for immersion."
-            </p>
-        </div>
-        
-        <img src="imgs/tvault.png" class="h-8 mx-auto mb-6 opacity-40 transition-opacity hover:opacity-100" alt="Teq Vault Logo">
-        <p class="text-[10px] tracking-[0.5em] text-slate-600 uppercase mb-4">Innovation • Engineering • Imagination</p>
-        <p class="text-xs text-slate-500 font-light">© 2026 Quetiemals | Teq Vault</p>
-    </footer>
+  <!-- ═══════════════════ FOOTER -->
+  <footer class="py-8 border-t border-white/5 bg-[#020617]">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+      <p>© <span id="year"></span> Teq Vault LLC. All rights reserved.</p>
+      <p>Engineering worlds, not just games.</p>
+    </div>
+  </footer>
 
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="js/script.js"></script>
+  <!-- ═══════════════════ SCRIPTS -->
+  <script>
+    // Lucide: replace <i data-lucide="...">
+    if (window.lucide) {
+      lucide.createIcons();
+    }
+
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    if (mobileBtn && mobileMenu) {
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+      });
+    }
+
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
