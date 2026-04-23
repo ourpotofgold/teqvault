@@ -80,10 +80,8 @@
 </head>
 <body class="pt-32 overflow-x-hidden">
 
-  <!-- Ambient scanline -->
   <div class="scanline"></div>
 
-  <!-- NAV -->
   <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -97,13 +95,13 @@
       <div class="hidden md:flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400 items-center">
         <a href="vision.html"    class="hover:text-[var(--circuit-blue)] transition">Vision</a>
         <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+        <a href="articles.html"  class="hover:text-white transition">Articles</a>
         <a href="library.html"   class="text-white border-b border-white pb-1">IP Library</a>
         <a href="strategy.html"  class="hover:text-white transition">Strategy</a>
       </div>
     </div>
   </nav>
 
-  <!-- HEADER -->
   <header class="relative max-w-5xl mx-auto text-center px-6 py-20 overflow-hidden">
     <div class="pointer-events-none absolute inset-0 -z-10">
       <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[720px] h-[420px] rounded-full bg-[radial-gradient(ellipse_at_center,rgba(0,163,255,0.15),transparent_65%)]"></div>
@@ -124,7 +122,6 @@
     </p>
   </header>
 
-  <!-- MAIN GRID -->
   <main class="max-w-7xl mx-auto px-6 pb-24">
     <div class="reveal mb-10 flex items-center justify-between gap-4 text-xs text-slate-500 uppercase tracking-[0.35em]">
       <span>Archive Node: IP‑LIB‑01</span>
@@ -134,11 +131,10 @@
       </span>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20">
 
-      <!-- Card: For Land and Kin -->
-      <article class="reveal glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--circuit-blue)] group">
-        <div class="space-y-6">
+      <article class="reveal glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--circuit-blue)] group flex flex-col">
+        <div class="space-y-6 flex-grow">
           <div class="aspect-[3/4] overflow-hidden rounded-xl shadow-2xl relative">
             <img src="../imgs/book-cover-02.png"
                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
@@ -159,16 +155,15 @@
               <li>• Status: Market Ready</li>
               <li>• Type: Core Lore • Novel‑Length Manuscript</li>
             </ul>
-            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em] mt-auto">
               Deployment lanes: Mobile RPG • Visual Novel • Companion Codex
             </p>
           </div>
         </div>
       </article>
 
-      <!-- Card: Aeterna Divisa -->
-      <article class="reveal delay-100 glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--voltage-orange)] group">
-        <div class="space-y-6">
+      <article class="reveal delay-100 glass-panel card-outline p-8 rounded-3xl border-t-2 border-[var(--voltage-orange)] group flex flex-col">
+        <div class="space-y-6 flex-grow">
           <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-[var(--voltage-orange)]/25 overflow-hidden relative">
             <div class="absolute inset-0 bg-gradient-to-br from-[var(--voltage-orange)]/18 to-transparent pointer-events-none"></div>
             <img src="../imgs/aeterna-divisa.png"
@@ -185,7 +180,7 @@
               Aeterna Divisa
             </h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              A celestial sci‑fi cycle exploring the Great Resonance and the Celestial Archives as living infrastructure. Built as a modular narrative spine with two canonized outcomes: the Great Fall and the Great Recitation.
+              A celestial sci‑fi cycle exploring the Great Resonance and the Celestial Archives as living infrastructure. Built as a modular narrative spine with two canonized outcomes.
             </p>
             <ul class="text-[10px] uppercase tracking-widest text-[var(--voltage-orange)] font-bold space-y-1">
               <li>• Status: Narrative Dev • Universe Bible</li>
@@ -199,16 +194,15 @@
                 <path d="M7 7h10v10"></path>
               </svg>
             </a>
-            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
-              Deployment lanes: Serialized Prose • Audio • Puzzle‑Driven Interfaces
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em] mt-auto">
+              Deployment lanes: Serialized Prose • Audio • Puzzle Interfaces
             </p>
           </div>
         </div>
       </article>
 
-      <!-- Card: Boot Camp -->
-      <article class="reveal delay-200 glass-panel card-outline p-8 rounded-3xl border-t-2 border-slate-500 group">
-        <div class="space-y-6">
+      <article class="reveal delay-200 glass-panel card-outline p-8 rounded-3xl border-t-2 border-slate-500 group flex flex-col">
+        <div class="space-y-6 flex-grow">
           <div class="aspect-[3/4] bg-slate-900 rounded-xl flex items-center justify-center border border-slate-700/80 overflow-hidden relative">
             <div class="absolute inset-0 bg-gradient-to-br from-slate-500/14 to-transparent pointer-events-none"></div>
             <img src="../imgs/boot-camp-portrait.png"
@@ -225,7 +219,7 @@
               Boot Camp
             </h3>
             <p class="text-sm text-slate-400 leading-relaxed">
-              A high‑stakes thriller following 18 maintainers trapped inside a training facility during a precision night assault, forced to weaponize procedure, improvisation, and systems thinking to survive professional adversaries.
+              A high‑stakes thriller following 18 maintainers trapped inside a training facility during a precision night assault, forced to weaponize procedure and systems thinking to survive.
             </p>
             <ul class="text-[10px] uppercase tracking-widest text-slate-400 font-bold space-y-1">
               <li>• Status: Manuscript Finished</li>
@@ -239,20 +233,42 @@
                 <path d="M7 7h10v10"></path>
               </svg>
             </a>
-            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em]">
-              Deployment lanes: Linear Prose • Tactics Sim • Scenario‑Based Training
+            <p class="text-[11px] text-slate-500 uppercase tracking-[0.3em] mt-auto">
+              Deployment lanes: Linear Prose • Tactics Sim • Training
             </p>
           </div>
         </div>
       </article>
 
     </div>
+
+    <div class="reveal glass-panel p-10 md:p-14 rounded-3xl border border-white/10 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-space font-bold text-white uppercase tracking-tight mb-6 border-b border-white/10 pb-4">
+            The Transmedia Architecture
+        </h2>
+        <div class="prose prose-invert max-w-none text-slate-300 leading-relaxed space-y-6">
+            <p>
+                At Teq Vault, we reject the notion that video game narratives should be an afterthought. Our methodology treats lore and world-building as the foundational operating system upon which all other media runs. Before a single line of C# is written in Unity, before a 3D model is rigged, we establish the core IP through rigorous literary drafting. 
+            </p>
+            <p>
+                This approach is what we call <strong>Transmedia Architecture</strong>. By writing full-length manuscripts like <em>For Land and Kin</em>, we answer complex questions about our world's economy, gravity, magic systems, and political factions. When it is time for our engineering team to design the back-end mobile application services or build out the match-3 combat grid for games like <em>Quetiemals</em>, they aren't guessing. They are pulling directly from a canonized, peer-reviewed story bible.
+            </p>
+            <p>
+                This strategy heavily mitigates production risk. It allows us to cross-pollinate assets across mediums seamlessly. A creature designed for our mobile RPG can simultaneously appear in an interactive e-book or a standalone tactical simulator. By investing heavily in the "Phase I" Narrative Foundation, we ensure that every product released under the Teq Vault banner feels cohesive, deep, and deeply respectful of the audience's time.
+            </p>
+        </div>
+    </div>
+
   </main>
 
-  <!-- FOOTER -->
-<footer class="py-8 border-t border-white/5 bg-[#020617]">
+  <footer class="py-8 border-t border-white/5 bg-[#020617]">
     <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-slate-500">
       <p>© <span id="year"></span> Teq Vault LLC. All rights reserved.</p>
+
+      <div class="flex items-center gap-6">
+        <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+      </div>
 
       <div class="flex items-center gap-6">
         <a href="https://teqvault.online" target="_blank" rel="noopener" class="hover:text-[var(--circuit-blue)] transition duration-300" aria-label="Website">
@@ -270,8 +286,6 @@
           <i data-lucide="mail" class="w-4 h-4"></i>
         </a>
       </div>
-
-      <p>Engineering worlds, not just games.</p>
     </div>
   </footer>
 
@@ -286,6 +300,7 @@
       });
     }, { threshold: 0.15 });
     document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
