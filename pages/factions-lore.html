@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lore: Factions of Eyuforyia | TEQ VAULT</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../styles/style.css"> 
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="pt-32 bg-[#050810] text-[#e2e8f0] font-space">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#050810]/90 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <a href="../index.html"><img src="../imgs/tvault.png" class="h-8 w-auto filter brightness-110" alt="Logo"></a>
+                <span class="font-bold tracking-tighter text-lg uppercase font-space hidden sm:block">Teq Vault</span>
+            </div>
+            <div class="flex gap-8 text-[10px] font-bold tracking-[0.3em] uppercase text-slate-400">
+                <a href="vision.html" class="hover:text-[var(--circuit-blue)] transition">Vision</a>
+                <a href="ecosystem.html" class="hover:text-[var(--voltage-orange)] transition">Ecosystem</a>
+                <a href="strategy.html" class="hover:text-white transition">Strategy</a>
+                <a href="join-the-vault.html" class="hover:text-[var(--circuit-blue)] transition">Careers</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-6 py-12">
+        <article>
+            <header class="mb-12 border-b border-white/10 pb-8">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="px-3 py-1 rounded-full border border-[var(--voltage-orange)]/30 bg-[var(--voltage-orange)]/5 text-[var(--voltage-orange)] text-[9px] font-black uppercase tracking-[0.3em]">
+                        Lore & IP
+                    </span>
+                    <span class="text-[10px] uppercase tracking-widest text-slate-500">Eyuforyia-01</span>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-space font-bold tracking-tight mb-6 text-white leading-tight">
+                    The Factions of Eyuforyia: Designing Non-Humanoid Characters
+                </h1>
+                <div class="flex items-center gap-4 text-sm text-slate-400">
+                    <span class="font-bold text-white uppercase tracking-widest text-xs">By Teq Vault Narrative Team</span>
+                    <span>•</span>
+                    <span>7 Min Read</span>
+                </div>
+            </header>
+
+            <div class="prose prose-invert prose-slate max-w-none space-y-6 text-slate-300 leading-relaxed">
+                
+                <p class="text-lg text-slate-200">
+                    A look into our character design philosophy. Why did we choose to omit humans entirely and focus on organic animal avatars to battle the Tech-Biomes? It fundamentally changes how the player interacts with the world of Eyuforyia.
+                </p>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">Shattering the Master/Pet Dynamic</h2>
+                <p>
+                    The primary reason we chose to remove humans from this story is that we didn't want the creatures to be viewed as "pets" to be controlled by their masters. In most creature-collecting games, humans are the central figures—they are the ones collecting, building, strategizing, and commanding these characters in battle. 
+                </p>
+                <p>
+                    That dynamic creates a layer of separation. It turns living, breathing inhabitants of a world into mere tools or collectibles used to finish a human's story. In Eyuforyia, these characters are not fighting for a badge or a human's glory; they are fighting for their own land and survival.
+                </p>
+
+                <div class="p-6 glass-panel rounded-2xl border-l-4 border-[var(--voltage-orange)] my-8">
+                    <p class="text-white font-space text-lg italic m-0">
+                        "The aim here is for the player to see themselves through the lens of our heroes, not like a master trying to use pets to finish a story."
+                    </p>
+                </div>
+
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">Autonomy in the Face of the Tech-Biomes</h2>
+                <p>
+                    By granting full autonomy to our non-humanoid roster, the stakes of the conflict immediately change. When characters like Ice Heart face down the invasive Tech-Biomes, the conflict is deeply personal. They are defending their homes, their kin, and their way of life from a mechanized threat. 
+                </p>
+                <p>
+                    This philosophy ripples through every aspect of our transmedia pipeline. In our novels, these characters have complex societies, languages, and cultures uninfluenced by humanity. In QUETIEMALS, this translates to gameplay where every ability triggered on the board feels like a deliberate, self-determined strike rather than a commanded attack. 
+                </p>
+                
+                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">A World That Stands Alone</h2>
+                <p>
+                    Ultimately, removing humans allowed us to build a more grounded, organic ecosystem. The heroes of Eyuforyia don't need a human protagonist to validate their struggle. By stepping into their world, the player gets to experience a purer form of epic fantasy—one where the wild fights back on its own terms.
+                </p>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="py-8 border-t border-white/5 bg-[#020617] mt-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-[11px] text-slate-500">
+            <p>© <span id="year"></span> Teq Vault LLC. All rights reserved.</p>
+            
+            <div class="flex items-center gap-6">
+                <a href="privacy.html" class="hover:text-white transition">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+            </div>
+
+            <p>Engineering worlds, not just games.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devlog: Test-Driven Development in Game Design | TEQ VAULT</title>
+    <title>Articles & Devlogs | TEQ VAULT</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="../styles/style.css"> 
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -25,65 +25,70 @@
         </div>
     </nav>
 
-    <main class="max-w-3xl mx-auto px-6 py-12">
-        <article>
-            <header class="mb-12 border-b border-white/10 pb-8">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="px-3 py-1 rounded-full border border-[var(--circuit-blue)]/30 bg-[var(--circuit-blue)]/5 text-[var(--circuit-blue)] text-[9px] font-black uppercase tracking-[0.3em]">
-                        Engineering Log
-                    </span>
-                    <span class="text-[10px] uppercase tracking-widest text-slate-500">Vol. 1</span>
-                </div>
-                <h1 class="text-3xl md:text-5xl font-space font-bold tracking-tight mb-6 text-white leading-tight">
-                    Engineering the Core: Why We Rely on Test-Driven Development for RPG Systems
-                </h1>
-                <div class="flex items-center gap-4 text-sm text-slate-400">
-                    <span class="font-bold text-white uppercase tracking-widest text-xs">By Teq Vault Engineering</span>
-                    <span>•</span>
-                    <span>5 Min Read</span>
-                </div>
-            </header>
-
-            <div class="prose prose-invert prose-slate max-w-none space-y-6 text-slate-300 leading-relaxed">
-                
-                <p class="text-lg text-slate-200">
-                    At Teq Vault, our motto is "Engineering Worlds, Not Just Games." It is easy to get caught up in the visual spectacle of game development—tweaking VFX graphs in Unity or perfecting the lighting on a new environment—but the true foundation of any lasting digital experience is its architecture. Today, we are pulling back the curtain on how we build bulletproof gameplay systems using Test-Driven Development (TDD) and continuous integration pipelines.
-                </p>
-
-                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">The Complexity of the Board</h2>
-                <p>
-                    When developing a boss-focused match-3 RPG like QUETIEMALS, the board state becomes exponentially complex. Every match doesn’t just deal damage; it triggers chain reactions, alters enemy UI states, calculates elemental resistances, and fires off unique guardian abilities. 
-                </p>
-                <p>
-                    Take a character like Ice Heart. When this armored blue wolf triggers a frost-based ultimate ability, the system has to calculate splash damage, apply potential freeze debuffs to adjacent targets, adjust the boss's turn timer, and update the player's energy reserves simultaneously. If we relied solely on manual playtesting to verify these interactions, bugs would inevitably slip through the cracks, leading to broken combos and frustrated players.
-                </p>
-
-                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">Flipping the Script with TDD</h2>
-                <p>
-                    This is where Test-Driven Development becomes non-negotiable. Adhering strictly to TDD principles means we write our test cases <em>before</em> we write the actual C# feature code in Unity. 
-                </p>
-                <p>
-                    Before a new status effect or board mechanic is ever visualized on screen, we write an automated test that defines exactly how it should behave. We simulate a board state, execute the ability in the code, and assert that the resulting numbers match our design documents. Initially, the test fails (because the feature doesn't exist yet). Then, we write the exact amount of code needed to make that test pass. Finally, we refactor the code for efficiency.
-                </p>
-                <p>
-                    This red-green-refactor loop guarantees that our core combat math is mathematically proven to work before we ever attach a 3D model or particle effect to it. It cleanly separates the data layer from the presentation layer, which is crucial for mobile-first games that need to run efficiently across a massive range of hardware.
-                </p>
-
-                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">Continuous Integration: The Safety Net</h2>
-                <p>
-                    Writing tests is only half the battle; running them consistently is the other. We utilize continuous integration (CI) pipelines to automate our quality assurance. Every time an engineer or technical artist commits a change to our version control repository, our CI server automatically compiles the project and runs our entire suite of unit and integration tests.
-                </p>
-                <p>
-                    If a newly added feature accidentally breaks the logic for another character's passive skill, the pipeline fails, the team is alerted, and the code is prevented from merging into the main build. This automated safety net means our team can experiment, iterate, and build ambitious mechanics with confidence, knowing the pipeline will catch regressions immediately.
-                </p>
-
-                <h2 class="text-2xl font-bold text-white mt-10 mb-4 font-space uppercase">Conclusion</h2>
-                <p>
-                    Building robust software isn't just about avoiding crashes; it’s about respecting the player's time. By treating game development with the same rigorous engineering standards used in enterprise backend services—relying heavily on TDD and CI pipelines—we ensure that when players step into the world of Eyuforyia, the only challenges they face are the ones we designed for them.
-                </p>
-
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        <header class="mb-16 text-center">
+            <div class="inline-block px-4 py-1 rounded-full border border-[var(--circuit-blue)]/30 bg-[var(--circuit-blue)]/5 text-[var(--circuit-blue)] text-[10px] font-black uppercase tracking-[0.5em] mb-6">
+                Transmissions
             </div>
-        </article>
+            <h1 class="text-4xl md:text-6xl font-space font-bold uppercase tracking-tighter mb-6 text-white">
+                Articles &amp; Devlogs
+            </h1>
+            <p class="text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                Deep dives into our software engineering processes, transmedia world-building, and hardware R&amp;D.
+            </p>
+        </header>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="devlog-tdd-pipeline.html" class="glass-panel rounded-2xl p-8 border border-white/10 hover:-translate-y-2 hover:border-[var(--circuit-blue)]/50 hover:shadow-[0_10px_30px_rgba(0,163,255,0.15)] transition duration-300 flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-[var(--circuit-blue)] text-[9px] font-black uppercase tracking-[0.2em] border border-[var(--circuit-blue)]/30 px-2 py-1 rounded">Engineering</span>
+                    <span class="text-slate-500 text-[10px] uppercase tracking-widest">5 Min Read</span>
+                </div>
+                <h2 class="text-xl font-bold text-white mb-3 uppercase group-hover:text-[var(--circuit-blue)] transition-colors">
+                    Engineering the Core: Why We Rely on Test-Driven Development
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                    Discover how we build bulletproof match-3 RPG mechanics for QUETIEMALS using strict TDD principles and continuous integration pipelines.
+                </p>
+                <div class="flex items-center gap-2 text-[10px] font-bold text-[var(--circuit-blue)] uppercase tracking-widest mt-auto">
+                    Read Transmission <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <a href="factions-lore.html" class="glass-panel rounded-2xl p-8 border border-white/10 hover:-translate-y-2 hover:border-[var(--voltage-orange)]/50 hover:shadow-[0_10px_30px_rgba(255,122,26,0.15)] transition duration-300 flex flex-col h-full group">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-[var(--voltage-orange)] text-[9px] font-black uppercase tracking-[0.2em] border border-[var(--voltage-orange)]/30 px-2 py-1 rounded">Lore &amp; IP</span>
+                    <span class="text-slate-500 text-[10px] uppercase tracking-widest">7 Min Read</span>
+                </div>
+                <h2 class="text-xl font-bold text-white mb-3 uppercase group-hover:text-[var(--voltage-orange)] transition-colors">
+                    The Factions of Eyuforyia: Designing Non-Humanoid Characters
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                    We have removed the "Master/Pet" dynamic entirely. Discover why our animal avatars fight for their own land with total autonomy, forcing players to see the world through the lens of a hero, not a trainer.
+                </p>
+                <div class="flex items-center gap-2 text-[10px] font-bold text-[var(--voltage-orange)] uppercase tracking-widest mt-auto">
+                    Read Transmission <i data-lucide="arrow-right" class="w-3 h-3 group-hover:translate-x-1 transition-transform"></i>
+                </div>
+            </a>
+
+            <div class="glass-panel rounded-2xl p-8 border border-white/10 opacity-70 flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="text-slate-300 text-[9px] font-black uppercase tracking-[0.2em] border border-white/20 px-2 py-1 rounded">R&amp;D</span>
+                    <span class="text-slate-500 text-[10px] uppercase tracking-widest">Drafting</span>
+                </div>
+                <h2 class="text-xl font-bold text-white mb-3 uppercase">
+                    Prototyping Text-Driven UIs for Embedded Hardware
+                </h2>
+                <p class="text-slate-400 text-sm leading-relaxed mb-6 flex-grow">
+                    Our findings on designing accessible, text-driven user interfaces tailored specifically for low-resource flip-phone hardware limitations.
+                </p>
+                <div class="flex items-center gap-2 text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-auto">
+                    <i data-lucide="lock" class="w-3 h-3"></i> Encrypting...
+                </div>
+            </div>
+
+        </div>
     </main>
 
     <footer class="py-8 border-t border-white/5 bg-[#020617] mt-12">
